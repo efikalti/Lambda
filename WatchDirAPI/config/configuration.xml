@@ -1,0 +1,8 @@
+#Tue Mar 17 15:14:03 EET 2015
+namenode=hdfs\://localhost\:9000/user/efi/logs
+statefile=statefile.dat
+recursive=true
+dir=/home/efi/temp
+logging.LEVEL=INFO
+first_time=false
+hdfs_path=/user/efi/logs
