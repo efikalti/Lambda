@@ -49,7 +49,6 @@ import java.nio.file.WatchService;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 /**
  * Watch a directory (or tree) for changes to files.
@@ -110,11 +109,10 @@ public class WatchDir {
     WatchDir() throws IOException {
         this.watcher = FileSystems.getDefault().newWatchService();
         this.keys = new HashMap<>();
-        Properties props = Config.getInstance().getProperties();
-        this.recursive = Boolean.parseBoolean(props.getProperty("recursive"));
-        this.first_time = Boolean.parseBoolean(props.getProperty("first_time"));
+        this.recursive = Boolean.parseBoolean( Config.getInstance().getProperty("recursive"));
+        this.first_time = Boolean.parseBoolean( Config.getInstance().getProperty("first_time"));
         
-        Path dir = Paths.get(props.getProperty("dir"));
+        Path dir = Paths.get( Config.getInstance().getProperty("dir"));
         
         if (recursive) {
             System.out.format("Scanning %s ...\n", dir);

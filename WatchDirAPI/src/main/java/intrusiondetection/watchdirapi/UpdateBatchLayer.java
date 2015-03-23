@@ -9,7 +9,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Properties;
 import java.util.Set;
 import java.util.Timer;
 import java.util.logging.Level;
@@ -26,8 +25,7 @@ public class UpdateBatchLayer implements Runnable{
     
     public UpdateBatchLayer()
     {
-        Properties props = Config.getInstance().getProperties();
-        this.statefile = props.getProperty("statefile");
+        this.statefile = Config.getInstance().getProperty("statefile");
         if (!this.retrievePreviousState())
         {
             files = new HashSet<>();
