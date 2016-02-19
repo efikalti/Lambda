@@ -15,7 +15,7 @@ echowarn() {
 
 # Function that prints information with green colour
 echoinfo(){
-  echo -e "[INFO] \e[32m$1 $2 $3\e[0m"
+  echo -e "[INFO] \e[32m$1 $2 $3 $4\e[0m"
 }
 
 
@@ -28,19 +28,33 @@ git_check() {
     # Try to install git if system is Ubuntu or Centos
     echowarn  "Git is required but it's not installed.";
     echoinfo  "Installing Git...";
+    echo
     if [ "$1" = "Ubuntu" ];
       then
-        echoinfo "ubuntu"
+          apt-get install -y git
       else if [ "$1" = "Centos" ];
         then
-          echoinfo "centos"
+          yum install -y git
       fi
     fi
     exit 1;
   }
 
   # Print git installed version
-  command git --version 2>&1 | (head -n1 && tail -n1) | awk '{split($0, a, " "); print "[INFO] Git version installed", a[3]}'
+  OUT=$(command git --version 2>&1 | (head -n1 && tail -n1) | awk '{split($0, array, " "); print array[3]}')
+  echoinfo "Git version installed " $OUT
+
+
+  if [ ! -d "$../ansible/" ]; then
+    git clone git://github.com/ansible/ansible.git --recursive
+  fi
+
+  if [ -d "$../ansible/hacking/env-setup" ]; then
+    source ansible/hacking/env-setup
+  else
+    echoerr "Installation cannot locate ansible folder for installation."
+    echoerr "Process will terminate now."
+  fi
 }
 
 
@@ -77,4 +91,5 @@ command -v foo >/dev/null 2>&1 ||
 }
 
 # Print Ansible installed version
-command ansible --version 2>&1 | (head -n1 && tail -n1) | awk '{split($0, a, " "); print "[INFO] Ansible version installed", a[2]}'
+OUT=$(command ansible --version 2>&1 | (head -n1 && tail -n1) | awk '{split($0, array, " "); print array[2]}')
+echoinfo "Ansible version installed " $OUT
