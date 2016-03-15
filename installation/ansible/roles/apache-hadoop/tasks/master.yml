@@ -1,0 +1,37 @@
+---
+
+  - name: Copy Apache HDFS init script.
+    template: src=hdfs-init.j2 dest=/etc/init.d/hdfs-init owner={{ user }} group={{ user }} mode=0740
+
+  - name: Copy Apache Yarn init script.
+    template: src=yarn-init.j2 dest=/etc/init.d/yarn-init owner={{ user }} group={{ user }} mode=0740
+
+  - name: Format Apache HDFS.
+    command: su - {{ user }} -c "yes | {{ installation_path }}/hadoop/bin/hadoop namenode -format"
+    tags:
+      - format-hdfs
+      - image-configure
+
+  - name: Start Apache HDFS.
+    command: /etc/init.d/hdfs-init start > /dev/null
+    tags:
+      - start-hdfs
+      - image-configure
+
+  - name: Start Apache Yarn.
+    command: /etc/init.d/yarn-init start > /dev/null
+    tags:
+      - start-yarn
+      - image-configure
+
+  - name: Create Apache HDFS user directory.
+    command: "{{ installation_path }}/hadoop/bin/hadoop fs -mkdir /user"
+    tags:
+      - create-dirs
+      - image-configure
+
+  - name: Create Apache HDFS user/{{user}} directory.
+    command: "{{ installation_path }}/hadoop/bin/hadoop fs -mkdir /user/{{ user }}"
+    tags:
+      - create-dirs
+      - image-configure

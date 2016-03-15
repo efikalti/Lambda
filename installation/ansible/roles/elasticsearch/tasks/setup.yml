@@ -1,0 +1,16 @@
+---
+
+  - name: Download Elasticsearch.
+    get_url: url="https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/{{ version }}/elasticsearch-{{ version }}.tar.gz" dest="{{ download_path }}/elasticsearch-{{ version }}.tar.gz"
+    tags:
+      - download
+
+  - name: Uncompress Elasticsearch.
+    unarchive: src="{{ download_path }}/elasticsearch-{{ version }}.tar.gz" dest="{{ installation_path }}" copy=no owner={{ user }} group={{ user }}
+    tags:
+      - download
+
+  - name: Create softlink for elasticsearch.
+    file: src="{{ installation_path }}/elasticsearch-{{ version }}" dest="{{ installation_path }}/elasticsearch" state=link
+    tags:
+      - download

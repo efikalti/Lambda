@@ -1,0 +1,7 @@
+[master]
+# Master server
+localhost
+
+[slaves]
+# List of slave servers
+localhost
