@@ -1,12 +1,18 @@
 ---
 
+  - name: Check if the elasticsearch directory exists
+    stat: path={{ installation_path }}/elasticsearch/
+    register: stat_result
+
   - name: Download Elasticsearch.
     get_url: url="https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/{{ version }}/elasticsearch-{{ version }}.tar.gz" dest="{{ download_path }}/elasticsearch-{{ version }}.tar.gz"
+    when: stat_result.stat.exists == False
     tags:
       - download
 
   - name: Uncompress Elasticsearch.
     unarchive: src="{{ download_path }}/elasticsearch-{{ version }}.tar.gz" dest="{{ installation_path }}" copy=no owner={{ user }} group={{ user }}
+    when: stat_result.stat.exists == False
     tags:
       - download
 
@@ -14,3 +20,19 @@
     file: src="{{ installation_path }}/elasticsearch-{{ version }}" dest="{{ installation_path }}/elasticsearch" state=link
     tags:
       - download
+
+  - name: Copy elasticsearch configuration.
+    template: src=elasticsearch.yml.j2 dest="{{ installation_path }}/elasticsearch/config/elasticsearch.yml" owner={{ user }} group={{ user }} mode=0644
+    tags:
+      - configure
+
+
+  - name: Create data directory
+    file: path={{ data_path }} state=directory mode=0755
+    tags:
+      - configure
+
+  - name: Create log directory
+    file: path={{ log_path }} state=directory mode=0755
+    tags:
+      - configure

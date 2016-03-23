@@ -3,3 +3,6 @@ version: "2.2.0"
 download_path: "/tmp"
 installation_path: "/usr/local"
 user: "efi"
+data_path: "/var/data/elasticsearch"
+log_path: "/var/log/elasticsearch"
+cluster_name: lambda-elasticsearch
