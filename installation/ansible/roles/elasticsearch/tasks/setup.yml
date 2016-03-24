@@ -17,7 +17,7 @@
       - download
 
   - name: Create softlink for elasticsearch.
-    file: src="{{ installation_path }}/elasticsearch-{{ version }}" dest="{{ installation_path }}/elasticsearch" state=link
+    file: src="{{ installation_path }}/elasticsearch-{{ version }}" dest="{{ installation_path }}/elasticsearch" state=link owner={{ user }} group={{ user }}
     tags:
       - download
 
@@ -28,11 +28,11 @@
 
 
   - name: Create data directory
-    file: path={{ data_path }} state=directory mode=0755
+    file: path={{ data_path }} state=directory mode=0777 owner={{ user }} group={{ user }}
     tags:
       - configure
 
   - name: Create log directory
-    file: path={{ log_path }} state=directory mode=0755
+    file: path={{ log_path }} state=directory mode=0777 owner={{ user }} group={{ user }}
     tags:
       - configure

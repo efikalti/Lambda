@@ -1,0 +1,6 @@
+---
+
+  - name: Pip install supervisor.
+    pip: name=supervisor
+    tags:
+      - install

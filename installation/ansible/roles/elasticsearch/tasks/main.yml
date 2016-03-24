@@ -4,9 +4,7 @@
     tags:
       - setup
 
-  - name: Include tasks for master.
-    include: master.yml
-    when: "'master' in group_names"
+  - name: Include tasks for start.
+    include: start.yml
     tags:
-     - master-install
-
+     - start-elasticsearch

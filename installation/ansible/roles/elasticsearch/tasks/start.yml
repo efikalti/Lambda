@@ -1,0 +1,8 @@
+---
+
+  - name: Start Elasticsearch with user "{{ user }}"
+    command: "/home/efi/Projects/Lambda/installation/start.sh"
+    become: yes
+    become_user: "{{ user }}"
+    tags:
+      - start-elasticsearch

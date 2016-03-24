@@ -1,0 +1,10 @@
+---
+  - name: Include pip tasks.
+    include: pip-setup.yml
+    tags:
+      - pip-setup
+
+  - name: Include tasks for supervisord-setup.
+    include: supervisor-setup.yml
+    tags:
+     - supervisor-setup

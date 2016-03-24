@@ -6,3 +6,4 @@ user: "efi"
 data_path: "/var/data/elasticsearch"
 log_path: "/var/log/elasticsearch"
 cluster_name: lambda-elasticsearch
+repo: "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main"
