@@ -4,3 +4,8 @@
     pip: name=supervisor
     tags:
       - install
+
+  - name: Copy supervisord configuration.
+    template: src=supervisord.conf.j2 dest="/etc/supervisord.conf" owner={{ user }} group={{ user }} mode=0644
+    tags:
+      - configure
