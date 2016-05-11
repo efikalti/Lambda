@@ -1,5 +1,0 @@
----
-version: "2.2.0"
-download_path: "/tmp"
-installation_path: "/usr/local"
-user: "efi"

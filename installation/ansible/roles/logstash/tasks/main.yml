@@ -1,10 +1,5 @@
 ---
-  - name: Include pip tasks.
-    include: pip-setup.yml
+  - name: Include install tasks.
+    include: install.yml
     tags:
-      - pip-setup
-
-  - name: Include tasks for supervisord-setup.
-    include: supervisor-setup.yml
-    tags:
-     - supervisor-setup
+      - logstash-install

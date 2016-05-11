@@ -3,4 +3,4 @@
   - hosts: logstash
     user: root
     roles:
-      - supervisor
+      - logstash
