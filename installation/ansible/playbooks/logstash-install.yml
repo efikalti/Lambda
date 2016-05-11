@@ -1,6 +1,6 @@
 ---
 
-  - hosts: supervisor
+  - hosts: logstash
     user: root
     roles:
       - supervisor

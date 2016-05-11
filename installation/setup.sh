@@ -1,5 +1,6 @@
 #!/bin/bash
 
+### FUNCTIONS ###
 
 # Function that prints to stderr with red colour
 echoerr() {
@@ -14,7 +15,7 @@ echowarn() {
 
 
 # Function that prints information with green colour
-echoinfo(){
+echoinfo() {
   echo -e "[INFO] \e[32m$1 $2 $3 $4\e[0m"
 }
 
@@ -44,13 +45,17 @@ git_check() {
   OUT=$(command git --version 2>&1 | (head -n1 && tail -n1) | awk '{split($0, array, " "); print array[3]}')
   echoinfo "Git version installed " $OUT
 
-
-  if [ ! -d "$../ansible/" ]; then
-    git clone git://github.com/ansible/ansible.git --recursive
+  # Check if ansible is already present in /tmp/ folder from previous tries
+  if [ ! -d "/tmp/ansible/" ]; then
+    echoinfo  "Cloning anible repository in /tmp/ ...";
+    git clone git://github.com/ansible/ansible.git /tmp/ansible --recursive
   fi
 
-  if [ -d "$../ansible/hacking/env-setup" ]; then
-    source ansible/hacking/env-setup
+    echoinfo  "Installing Ansible...";
+
+  # Check that the folder cloned successfully and then run the install script env-setup
+  if [ -d "/tmp/ansible/hacking/" ]; then
+    source /tmp/ansible/hacking/env-setup
   else
     echoerr "Installation cannot locate ansible folder for installation."
     echoerr "Process will terminate now."
@@ -58,7 +63,14 @@ git_check() {
 }
 
 
-# MAIN
+# Function to run the ansible script for cluster installation 
+run_ansible() {
+
+}
+
+
+### MAIN ###
+
 echoinfo  "Setup starting...";
 echo
 
@@ -82,7 +94,7 @@ echoinfo $OS $VER x$ARCH
 echo
 
 # Check if ansible is installed in the system
-command -v foo >/dev/null 2>&1 ||
+command -v ansible >/dev/null 2>&1 ||
 {
   # Try to install git if system is Ubuntu or Centos
   echowarn  "Ansible is required but it's not installed.";

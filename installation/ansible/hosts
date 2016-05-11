@@ -1,7 +1,23 @@
-[master]
+
+[hadoop]
+# Hadoop group of nodes
+
+[hadoop:master]
 # Master server
 localhost
 
-[slaves]
+[hadoop:slaves]
 # List of slave servers
+localhost
+
+[elastic]
+# Elasticsearch nodes
+localhost
+
+[supervisor]
+# Supervisor nodes
+localhost
+
+[logstash]
+# Logstash nodes
 localhost
