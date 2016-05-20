@@ -67,11 +67,12 @@ echo_packages(){
     exit 0;
   fi
 
+  cd "$(dirname "ansible")"
   if $hadoop;
     then run_ansible $hadoop
   fi
 
-  
+
 }
 
 
@@ -120,6 +121,9 @@ git_check() {
 
 # Function to run the ansible script for cluster installation
 run_ansible() {
+  command="ansible-playbook playbooks/hadoop-install.yml --list-tasks"
+  eval $command
+  echo "finished"
   exit 0;
 }
 
