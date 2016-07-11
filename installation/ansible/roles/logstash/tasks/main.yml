@@ -1,0 +1,5 @@
+---
+  - name: Include install tasks.
+    include: logstash-install.yml
+    tags:
+      - logstash-install

@@ -1,6 +1,6 @@
 ---
 
-  - hosts: all
+  - hosts: supervisor
     user: root
     roles:
       - supervisor

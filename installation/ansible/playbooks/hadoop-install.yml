@@ -1,6 +1,6 @@
 ---
 
-  - hosts: all
+  - hosts: hadoop
     user: root
     roles:
      - apache-hadoop
