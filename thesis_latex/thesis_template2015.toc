@@ -1,0 +1,16 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Εισαγωγή}{9}{chapter.1}
+\contentsline {chapter}{\numberline {2}Βιβλιογραφική Ανασκόπηση}{10}{chapter.2}
+\contentsline {chapter}{\numberline {3}Data Model}{11}{chapter.3}
+\contentsline {section}{\numberline {1.}Ορολογία}{12}{section.3.1}
+\contentsline {section}{\numberline {2.}Ιδιότητες των δεδομένων}{12}{section.3.2}
+\contentsline {subsection}{\numberline {2.1}Rawness}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {2.2}Immutability}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {2.3}Perpetuity}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {2.4}Delete}{14}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Πειραματική Διαδικασία}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}Αποτελέσματα και Ανάλυση}{16}{chapter.5}
+\contentsline {chapter}{\numberline {6}Συμπεράσματα}{18}{chapter.6}
+\contentsline {chapter}{\numberline {\MakeUppercase {α\anw@true \anw@print \relax }}Το λογισμικό}{19}{appendix.Alph1}
+\contentsline {chapter}{\numberline {\MakeUppercase {β\anw@true \anw@print \relax }}Ορολογία}{20}{appendix.Alph2}
+\contentsline {chapter}{\numberline {\MakeUppercase {γ\anw@true \anw@print \relax }}Σύντομο βιογραφικό σημείωμα}{21}{appendix.Alph3}

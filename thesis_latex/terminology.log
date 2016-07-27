@@ -1,0 +1,44 @@
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.7.25)  25 JUL 2016 12:16
+ restricted \write18 enabled.
+**terminology.tex
+(./terminology.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+! Undefined control sequence.
+l.1 \newglossaryentry
+                   {computer}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \newglossaryentry{c
+                     omputer}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+! Emergency stop.
+<*> terminology.tex
+                
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 7 strings out of 493803
+ 100000,552014 words of node,token memory allocated 1167 words of node memory still in use:
+   1 hlist, 23 glue, 143 glyph, 34 glue_spec, 1 temp, 1 local_par, 1 dir nodes
+   avail lists: 2:11,3:1,5:1
+ 3930 multiletter control sequences out of 65536+600000
+ 14 fonts using 563007 bytes
+ 5i,0n,4p,78b,16s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!
