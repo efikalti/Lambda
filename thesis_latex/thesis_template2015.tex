@@ -25,7 +25,7 @@
 % FONTS
 \usepackage{xunicode}
 \usepackage{xltxtra}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
 %\setromanfont [Ligatures={Common}, BoldFont={GFS Artemisia Bold}, ItalicFont={Gentium Italic}]{Gentium}
 %\setmonofont[Scale=0.8]{Monaco} 
@@ -37,12 +37,18 @@
 % package to handle line spacing
 \usepackage{setspace}
 
+% Tables
+\usepackage{multirow}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage[section]{placeins}
+
 % HEADINGS
 \usepackage{sectsty} 
 \usepackage[normalem]{ulem} 
 \sectionfont{\rmfamily\mdseries\upshape\Large}
 \subsectionfont{\rmfamily\bfseries\upshape\normalsize} 
-\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize} 
+\subsubsectionfont{\rmfamily\mdseries\upshape\normalsize}
+
 
 % PDF SETUP
 % ---- FILL IN HERE THE DOC TITLE AND AUTHOR
@@ -51,11 +57,6 @@
 
 % package for fancy style headers and footers
 \usepackage{fancybox}
-
-% package for glossary
-\usepackage[xindy]{glossaries}
-\makeglossaries
-\loadglsentries{terminology}
 
 % redefine bullet symbols and section style
 \renewcommand\thesection{\arabic{section}.}
@@ -86,7 +87,6 @@
   \renewcommand\seename{βλέπε}%
   \renewcommand\alsoname{βλέπε επίσης}%
   \renewcommand\proofname{Απόδειξη}%
-  \renewcommand\glossaryname{Γλωσσάρι}%
   }
 
 \usepackage{xgreek}
@@ -102,15 +102,11 @@
 % create a blank page immediately after the cover page
 \include{blank_page}
 
-% This is only meant to include the NuSTRAP group logo in a separate page.
-% Remove it if not interested.
-\include{thesis_nustrap}
-
 % include the abstract, written in a separate file called thesis_abstract.tex
-\include{thesis_abstract}
-\include{blank_page}
-\include{thesis_dedication}
-\include{blank_page}
+%\include{thesis_abstract}
+%\include{blank_page}
+%\include{thesis_dedication}
+%\include{blank_page}
 
 % Create table of contents - not mandatory
 \tableofcontents
@@ -120,37 +116,37 @@
 %\listoffigures
 
 % include files with content. Changes the names according to your taste.
-\chapter{Εισαγωγή}
-\input{thesis_intro}
+%\chapter{Εισαγωγή}
+%\input{thesis_intro}
 
-\chapter{Βιβλιογραφική Ανασκόπηση}
-\input{thesis_theory}
+%\chapter{Βιβλιογραφική Ανασκόπηση}
+%\input{thesis_theory}
 
 \input{data_model}
 
-\chapter{Πειραματική Διαδικασία}
-\input{thesis_experiment}
+\input{master_dataset_store}
 
-\chapter{Αποτελέσματα και Ανάλυση}
-\input{thesis_results}
+%\chapter{Πειραματική Διαδικασία}
+%\input{thesis_experiment}
 
-\chapter{Συμπεράσματα}
-\input{thesis_conclusions}
+%\chapter{Αποτελέσματα και Ανάλυση}
+%\input{thesis_results}
+
+%\chapter{Συμπεράσματα}
+%\input{thesis_conclusions}
 
 
-\bibliographystyle{alpha} % bibliography style is alpha:  eg. [Mer02]
-\bibliography{thesis_template} % this is the .bib file that holds the bibliography records 
+%\bibliographystyle{alpha} % bibliography style is alpha:  eg. [Mer02]
+%\bibliography{thesis_template} % this is the .bib file that holds the bibliography records 
 
 \appendix
-\chapter{Το λογισμικό}
-\input{thesis_appx_software}
+%\chapter{Το λογισμικό}
+%\input{thesis_appx_software}
 
 \chapter{Ορολογία}
 \input{terminology}
 
-\chapter{Σύντομο βιογραφικό σημείωμα}
-\input{thesis_appx_vita}
-
-\printglossaries
+%\chapter{Σύντομο βιογραφικό σημείωμα}
+%\input{thesis_appx_vita}
 
 \end{document}

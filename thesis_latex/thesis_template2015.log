@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.7.25)  26 JUL 2016 12:33
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.7.25)  29 JUL 2016 11:39
  restricted \write18 enabled.
 **thesis_template2015.tex
 (./thesis_template2015.tex
@@ -490,7 +490,7 @@ luaotfload:  then use the possibly updated libraries. The merged
 luaotfload:  version is not supported as it is a frozen instance.
 luaotfload:  Problems can be reported to the ConTeXt mailing list."
 luaotfload: pop namespace from font loader -- non-destructive
-luaotfload: fontloader loaded in 0.030 seconds
+luaotfload: fontloader loaded in 0.028 seconds
 luatexbase-mcb: inserting 'luaotfload.node_processor'
 at position 1 in 'pre_linebreak_filter'
 luatexbase-mcb: inserting 'luaotfload.node_processor'
@@ -756,6 +756,22 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen298
+\extrarowheight=\dimen299
+\NC@list=\toks28
+\extratabsurround=\skip275
+\backup@length=\skip276
+)
+\everycr=\toks29
+\minrowclearance=\skip277
+)
+\rownum=\count321
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -770,15 +786,15 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 luaotfload | load : auto-selecting default features for script: dflt(load luc: /
 home/efi/.texmf-var/luatex-cache/generic/fonts/otf/linlibertine-r.luc)
 luaotfload | load : auto-selecting default features for script: dflt
-luaotfload: font no 21 (LinLibertineO) defines feature cpsp for script latn
-luaotfload: font no 21 (LinLibertineO) defines feature cpsp for script latn
+luaotfload: font no 21 (LinLibertineO) defines feature case for script latn
+luaotfload: font no 21 (LinLibertineO) defines feature case for script latn
 *************************************************
 * fontspec warning: "no-mapping-ligtex"
 * 
 * Input mapping not (yet?) supported in LuaTeX.
 * Use "Ligatures=TeX" instead of "Mapping=tex-text".
 *************************************************
-\g_fontspec_family_Linux Libertine O_int=\count321
+\g_fontspec_family_Linux Libertine O_int=\count322
 luaotfload | load : auto-selecting default features for script: dflt
 luaotfload: font no 21 (LinLibertineO) defines feature smcp for script latn with
  language dflt
@@ -849,6 +865,12 @@ luaotfload | load : no defaults for script "latn", falling back to "dflt" (/usr
 /share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen300
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styl
 es
@@ -856,15 +878,15 @@ es
 (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box271
 \UL@hyphenbox=\box272
-\UL@skip=\skip275
-\UL@hook=\toks28
-\UL@height=\dimen298
-\UL@pe=\count322
-\UL@pixel=\dimen299
+\UL@skip=\skip278
+\UL@hook=\toks30
+\UL@height=\dimen301
+\UL@pe=\count323
+\UL@pixel=\dimen302
 \ULC@box=\box273
 luaotfload | load : auto-selecting default features for script: dflt
 Package: ulem 2012/05/18
-\ULdepth=\dimen300
+\ULdepth=\dimen303
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -908,14 +930,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen301
-\Hy@linkcounter=\count323
-\Hy@pagecounter=\count324
+\@linkdim=\dimen304
+\Hy@linkcounter=\count324
+\Hy@pagecounter=\count325
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count325
+\Hy@SavedSpaceFactor=\count326
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -930,17 +952,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count326
+\c@Hy@tempcnt=\count327
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen302
-\Fld@menulength=\count327
-\Field@Width=\dimen303
-\Fld@charsize=\dimen304
+\XeTeXLinkMargin=\dimen305
+\Fld@menulength=\count328
+\Field@Width=\dimen306
+\Fld@charsize=\dimen307
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -950,224 +972,48 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count328
-\c@Item=\count329
-\c@Hfootnote=\count330
+\Hy@abspage=\count329
+\c@Item=\count330
+\c@Hfootnote=\count331
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count331
-\c@bookmark@seq@number=\count332
+\Fld@listcount=\count332
+\c@bookmark@seq@number=\count333
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 2.
 )
-\Hy@SectionHShift=\skip276
+\Hy@SectionHShift=\skip279
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \@fancybox=\box274
-\shadowsize=\dimen305
+\shadowsize=\dimen308
 \@Sbox=\box275
-\do@VerbBox=\toks29
-\the@fancyput=\toks30
-\this@fancyput=\toks31
-\EndVerbatimTokens=\toks32
+\do@VerbBox=\toks31
+\the@fancyput=\toks32
+\this@fancyput=\toks33
+\EndVerbatimTokens=\toks34
 \Verbatim@Outfile=\write3
 \Verbatim@Infile=\read2
-) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-Package: glossaries 2014/01/20 v4.03 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks33
-\XKV@tempa@toks=\toks34
-\XKV@depth=\count333
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/mfirstuc.sty
-Package: mfirstuc 2013/11/04 v1.08 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-\etb@tempcnta=\count334
-)
-\@glsmfirst=\toks35
-\@glsmrest=\toks36
-)
-(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
-Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
-Package: xfor 2009/02/05 v1.05 (NLCT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-base.sty
-Package: datatool-base 2013/09/06 v2.18 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
-Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count335
-)
-(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
-Package: datatool-fp 2013/08/29 v2.17 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
-Package: fp 1995/04/02
-
-`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
-Package: defpattern 1994/10/12
-\actioncount=\count336
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
-Package: fp-basic 1996/05/13
-\FP@xs=\count337
-\FP@xia=\count338
-\FP@xib=\count339
-\FP@xfa=\count340
-\FP@xfb=\count341
-\FP@rega=\count342
-\FP@regb=\count343
-\FP@regs=\count344
-\FP@times=\count345
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
-Package: fp-addons 1995/03/15
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
-Package: fp-snap 1995/04/05
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
-Package: fp-exp 1995/04/03
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
-Package: fp-trigo 1995/04/14
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
-Package: fp-pas 1994/08/29
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
-Package: fp-random 1995/02/23
-\FPseed=\count346
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
-Package: fp-eqn 1995/04/03
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
-Package: fp-upn 1996/10/21
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
-Package: fp-eval 1995/04/03
-)))
-\@dtl@toks=\toks37
-\@dtl@tmpcount=\count347
-\dtl@tmplength=\skip277
-\dtl@sortresult=\count348
-\@dtl@numgrpsepcount=\count349
-\@dtl@datatype=\count350
-\dtl@codeA=\count351
-\dtl@codeB=\count352
-\@dtl@foreach@level=\count353
-)
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-
-307.sty
-Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
-) (/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
-Package: translator 2010/06/12 ver 1.10
-
-(/usr/share/texmf/tex/latex/beamer/base/translator/translator-language-mappings
-.tex))
-\gls@level=\count354
-\@gls@tmpb=\toks38
-\gls@tmplen=\skip278
-\glswrite=\write4
-\glskeylisttok=\toks39
-\glslabeltok=\toks40
-\glsshorttok=\toks41
-\glslongtok=\toks42
-
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
-y
-Package: glossary-hypernav 2013/11/14 v4.0 (NLCT)
-) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
-Package: glossary-list 2013/11/14 v4.0 (NLCT)
-\glslistdottedwidth=\skip279
-) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
-Package: glossary-long 2013/11/14 v4.0 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip280
-\LTright=\skip281
-\LTpre=\skip282
-\LTpost=\skip283
-\LTchunksize=\count355
-\LTcapwidth=\dimen306
-\LT@head=\box276
-\LT@firsthead=\box277
-\LT@foot=\box278
-\LT@lastfoot=\box279
-\LT@cols=\count356
-\LT@rows=\count357
-\c@LT@tables=\count358
-\c@LT@chunks=\count359
-\LT@p@ftn=\toks43
-)
-\glsdescwidth=\skip284
-\glspagelistwidth=\skip285
-)
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
-Package: glossary-super 2013/11/14 v4.0 (NLCT)
-
-(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
-Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count360
-\ST@wd=\dimen307
-\ST@rightskip=\skip286
-\ST@leftskip=\skip287
-\ST@parfillskip=\skip288
-\ST@pageleft=\dimen308
-\ST@headht=\dimen309
-\ST@tailht=\dimen310
-\ST@pagesofar=\dimen311
-\ST@pboxht=\dimen312
-\ST@lineht=\dimen313
-\ST@stretchht=\dimen314
-\ST@prevht=\dimen315
-\ST@toadd=\dimen316
-\ST@dimen=\dimen317
-\ST@pbox=\box280
-))
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
-Package: glossary-tree 2013/11/14 v4.0 (NLCT)
-\glstreeindent=\skip289
-))
-\glo@main@file=\write5
-Package glossaries Info: Writing glossary file thesis_template2015.glo on input 
-line 57.
-
-(./terminology.tex)
-(/usr/share/texlive/texmf-dist/tex/xelatex/xgreek/xgreek.sty
+) (/usr/share/texlive/texmf-dist/tex/xelatex/xgreek/xgreek.sty
 File: xgreek.sty 2013/07/05 v2.5 Package `xgreek.sty'
 
 Package `xgreek' version 2.5 by Apostolos Syropoulos
 LaTeX Info: Redefining \anw@false on input line 461.
 LaTeX Info: Redefining \anw@true on input line 463.
 LaTeX Info: Redefining \anw@print on input line 465.
-\@attic@num=\count361
+\@attic@num=\count334
 )
-(./thesis_template2015.aux (./blank_page.aux) (./thesis_nustrap.aux)
-(./thesis_abstract.aux) (./blank_page.aux) (./thesis_dedication.aux)
-(./blank_page.aux) (./blank_page.aux))
+(./thesis_template2015.aux (./blank_page.aux) (./blank_page.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
 LaTeX Font Info:    ... okay on input line 96.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
@@ -1202,17 +1048,17 @@ luaotfload | load : auto-selecting default features for script: latn
 luaotfload | load : no defaults for script "latn", falling back to "dflt"
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count362
-\scratchdimen=\dimen318
-\scratchbox=\box281
-\nofMPsegments=\count363
-\nofMParguments=\count364
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count365
-\MPscratchDim=\dimen319
-\MPnumerator=\count366
-\makeMPintoPDFobject=\count367
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count335
+\scratchdimen=\dimen309
+\scratchbox=\box276
+\nofMPsegments=\count336
+\nofMParguments=\count337
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen310
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1333,7 +1179,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box282
+\AtBeginShipoutBox=\box277
 Package hyperref Info: Link coloring ON on input line 96.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1341,7 +1187,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count368
+\c@section@level=\count341
 LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 96.
@@ -1349,14 +1195,10 @@ LaTeX Info: Redefining \pageref on input line 96.
 LaTeX Info: Redefining \nameref on input line 96.
 
 (./thesis_template2015.out) (./thesis_template2015.out)
-\@outlinefile=\write6
+\@outlinefile=\write4
 LaTeX Info: Redefining \Ref on input line 96.
-
-(/usr/share/texlive/texmf-dist/tex/latex/glossaries/dict/glossaries-dictionary-
-English.dict
-Dictionary: glossaries-dictionary, Language: English 
-) (./thesis_template2015.glsdefs) (./thesis_title.tex
-<aristotle_logo.png, id=64, 278.54062pt x 209.28188pt>
+ (./thesis_title.tex
+<aristotle_logo.png, id=76, 278.54062pt x 209.28188pt>
 File: aristotle_logo.png Graphic file (type png)
 
 <use aristotle_logo.png>
@@ -1434,193 +1276,138 @@ l.103 \include{blank_page}
                          [1
 
 ]
-No file thesis_nustrap.tex.
-(./thesis_abstract.tex
-luaotfload | load : auto-selecting default features for script: latn
-luaotfload | load : no defaults for script "latn", falling back to "dflt"
-luaotfload | load : auto-selecting default features for script: latn
-luaotfload | load : no defaults for script "latn", falling back to "dflt"
-
-LaTeX Warning: Citation `Mertzimekis2012' on page 2 undefined on input line 7.
-
-
-LaTeX Warning: Citation `Mertzimekis2012' on page 2 undefined on input line 20.
-
-) [2
-
-
-
-
-] (./blank_page.tex) [3
-
-
-] (./thesis_dedication.tex) [4
-
-
-] (./blank_page.tex)
-[5
-
-
-]
 luaotfload | load : auto-selecting default features for script: latn
 luaotfload | load : no defaults for script "latn", falling back to "dflt"
 luaotfload | load : auto-selecting default features for script: latn
 luaotfload | load : no defaults for script "latn", falling back to "dflt" (./th
 esis_template2015.toc
-LaTeX Info: Redefining \anw@print on input line 14.
-LaTeX Info: Redefining \anw@print on input line 15.
- [6
-
-
-]
-LaTeX Info: Redefining \anw@print on input line 16.
-)
-\tf@toc=\write7
- [7] (./blank_page.tex) [8
-
-]
-Κεφάλαιο 1.
-(./thesis_intro.tex) [9
-
-
-]
-Κεφάλαιο 2.
-(./thesis_theory.tex) (./data_model.tex [10
-
-]
-Κεφάλαιο 3.
 luaotfload | load : auto-selecting default features for script: latn
-luaotfload | load : no defaults for script "latn", falling back to "dflt" [11
+luaotfload | load : no defaults for script "latn", falling back to "dflt" [2
+
+
+]
+LaTeX Info: Redefining \anw@print on input line 20.
+)
+\tf@toc=\write5
+ [3]
+(./blank_page.tex) [4
+
+] (./data_model.tex
+Κεφάλαιο 1.
+luaotfload | load : auto-selecting default features for script: latn
+luaotfload | load : no defaults for script "latn", falling back to "dflt" [5
+
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-
+luaotfload | load : auto-selecting default features for script: latn
+luaotfload | load : no defaults for script "latn", falling back to "dflt"
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-[12] [13]
+[6] [7]
 Overfull \hbox (4.63911pt too wide) in paragraph at lines 45--46
 [][]\EU2/LinuxLibertineO(0)/m/n/12 Σε αρ-κε-τές πε-ρι-πτώ-σε
 ις ευαί-σθη-των και ιδιω-τι-κών δε-δο-μέ-νων, 
 απαι-
  []
 
-) [14]
-Κεφάλαιο 4.
-(./thesis_experiment.tex
+[8]) [9] (./master_dataset_store.tex [10]
+Κεφάλαιο 2.
 
-LaTeX Warning: Citation `2012_PM' on page 15 undefined on input line 19.
+Overfull \hbox (12.52937pt too wide) in paragraph at lines 3--4
+[][]\EU2/LinuxLibertineO(0)/m/n/12 Αυτό το κε-φά-λαιο επι-κ
+εν-τρώ-νετε στο σύ-στημα απο-θή-κευ-σης του ma
+ster dataset
+ []
 
-
-LaTeX Warning: Citation `2011_AIP_Cl44' on page 15 undefined on input line 19.
-
-) [15
-
-]
-Κεφάλαιο 5.
-(./thesis_results.tex
-
-LaTeX Warning: Citation `wiki_latex' on page 16 undefined on input line 32.
-
-File: aristotle_logo.png Graphic file (type png)
-<use aristotle_logo.png>
-Package pdftex.def Info: aristotle_logo.png used on input line 38.
-(pdftex.def)             Requested size: 119.2467pt x 89.59346pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [16
-
-] [17]
-Κεφάλαιο 6.
-(./thesis_conclusions.tex)
-No file thesis_template2015.bbl.
-[18
+[11
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[][]|\EU2/LinuxLibertineO(0)/m/n/12 Υπο-στή-ριξη πα-ράλ-λη-λ
+ης
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[][]|\EU2/LinuxLibertineO(0)/m/n/12 Ευε-λι-ξία στην δια-χεί-
+ριση
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\EU2/LinuxLibertineO(0)/m/n/12 του κό-στους απο-θή-κευ-
+ []
+
+
+Overfull \hbox (81.13269pt too wide) in paragraph at lines 20--30
+ [][][] 
+ []
+
+[12] [13] [14
+
+] [15]
+Overfull \hbox (22.29434pt too wide) in paragraph at lines 58--60
+[][]\EU2/LinuxLibertineO(0)/m/n/12 Όπως ανα-φέρ-θηκε, υπάρ-
+χουν πολ-λές έτοι-μες υλο-ποι-ή-σεις Distributed Fi
+lesystem.
+ []
+
+[16]
+Overfull \hbox (13.42271pt too wide) in paragraph at lines 74--75
+[][]\EU2/LinuxLibertineO(0)/m/n/12 Parallel Virtual File System (Clemson Univer
+sity, Argonne National Laboratory,
+ []
+
+) [17]
 Παράρτημα \MakeUppercase {α\anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 145.
-(./thesis_appx_software.tex) [19
+LaTeX Info: Redefining \anw@print on input line 146.
+(./terminology.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+ [18
 
 ]
-Παράρτημα \MakeUppercase {β\anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 148.
-(./terminology.tex
-\@gls@deffile=\write8
-) [20
-
-]
-Παράρτημα \MakeUppercase {γ\anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 151.
-(./thesis_appx_vita.tex
-Overfull \hbox (1.78587pt too wide) in paragraph at lines 12--16
-\EU2/LinuxLibertineO(0)/m/n/12 2263: Απο-λυ-τή-ριο, Τε-χνο-λο-
-γική Ακα-δη-μία Δια-γα-λα-ξια-κής Συ-νο-μο-σπ
-ον-δίας 
- []
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+ (./thesis_template2015.aux (./blank_page.aux)
+(./blank_page.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
 
 
-Overfull \hbox (9.75034pt too wide) in paragraph at lines 33--35
-[][]\EU2/LinuxLibertineO(0)/m/n/12 Dr. Who, \EU2/LinuxLibertineO(0)/m/it/12 Eff
-ective tactics in the Tardis chamber against unknown wormhole
- []
+Package rerunfilecheck Warning: File `thesis_template2015.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-
-Overfull \hbox (15.77295pt too wide) in paragraph at lines 42--43
-[][]\EU2/LinuxLibertineO(0)/m/n/12 53$[][]$ Συμ-πό-σιο Εται-ρεί
-ας Δια-γα-λα-ξια-κών Σπου-δών, Αν-δρο-μέδα Spa R
-esort,
- []
-
-)
-No file thesis_template2015.gls.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
-[21
-
-] [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
- (./thesis_template2015.aux (./blank_page.aux) (./thesis_nustrap.aux)
-(./thesis_abstract.aux) (./blank_page.aux) (./thesis_dedication.aux)
-(./blank_page.aux) (./blank_page.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
-Package rerunfilecheck Info: File `thesis_template2015.out' has not changed.
-(rerunfilecheck)             Checksum: 7857EE8B23137EFB7CA7F9993499F564;1012.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
+Package rerunfilecheck Info: Checksums for `thesis_template2015.out':
+(rerunfilecheck)             Before: 3EF9E933232F1BE0C90BDE9E0438D223;1251
+(rerunfilecheck)             After:  58CE177171EFA07DDE024ED48EE324C7;1533.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
  )
 
 Here is how much of LuaTeX's memory you used:
- 26058 strings out of 493803
- 125200,662416 words of node,token memory allocated
- 489 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 3 glue, 3 kern, 1 penalty, 8 attribute, 58 glue_spe
-c, 8 attribute_list, 1 write nodes
-   avail lists: 1:3,2:6843,3:192,4:530,5:122,6:2226,7:55,8:17,9:89,10:288
- 28524 multiletter control sequences out of 65536+600000
- 57 fonts using 9502351 bytes
- 49i,8n,50p,1718b,497s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 22204 strings out of 493803
+ 100000,552014 words of node,token memory allocated
+ 455 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 3 glue, 2 kern, 1 penalty, 7 attribute, 55 glue_spe
+c, 7 attribute_list, 1 write nodes
+   avail lists: 1:1,2:7538,3:109,4:724,5:168,6:2440,7:111,8:19,9:153,10:358
+ 25049 multiletter control sequences out of 65536+600000
+ 57 fonts using 9502271 bytes
+ 49i,13n,50p,1593b,492s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.o
 tf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R
 B.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertin
-e_R.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis_template2015.pdf (23 pages, 194237 bytes).
+e_R.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb>
+Output written on thesis_template2015.pdf (19 pages, 155689 bytes).
 
-PDF statistics: 243 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 131072)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 215 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 131072)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
