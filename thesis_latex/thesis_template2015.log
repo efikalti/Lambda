@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.7.25)  29 JUL 2016 11:39
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2016.7.25)  2 AUG 2016 14:22
  restricted \write18 enabled.
 **thesis_template2015.tex
 (./thesis_template2015.tex
@@ -490,7 +490,7 @@ luaotfload:  then use the possibly updated libraries. The merged
 luaotfload:  version is not supported as it is a frozen instance.
 luaotfload:  Problems can be reported to the ConTeXt mailing list."
 luaotfload: pop namespace from font loader -- non-destructive
-luaotfload: fontloader loaded in 0.028 seconds
+luaotfload: fontloader loaded in 0.030 seconds
 luatexbase-mcb: inserting 'luaotfload.node_processor'
 at position 1 in 'pre_linebreak_filter'
 luatexbase-mcb: inserting 'luaotfload.node_processor'
@@ -786,8 +786,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 luaotfload | load : auto-selecting default features for script: dflt(load luc: /
 home/efi/.texmf-var/luatex-cache/generic/fonts/otf/linlibertine-r.luc)
 luaotfload | load : auto-selecting default features for script: dflt
-luaotfload: font no 21 (LinLibertineO) defines feature case for script latn
-luaotfload: font no 21 (LinLibertineO) defines feature case for script latn
+luaotfload: font no 21 (LinLibertineO) defines feature mkmk for script latn
+luaotfload: font no 21 (LinLibertineO) defines feature mkmk for script latn
 *************************************************
 * fontspec warning: "no-mapping-ligtex"
 * 
@@ -1198,7 +1198,7 @@ LaTeX Info: Redefining \nameref on input line 96.
 \@outlinefile=\write4
 LaTeX Info: Redefining \Ref on input line 96.
  (./thesis_title.tex
-<aristotle_logo.png, id=76, 278.54062pt x 209.28188pt>
+<aristotle_logo.png, id=112, 278.54062pt x 209.28188pt>
 File: aristotle_logo.png Graphic file (type png)
 
 <use aristotle_logo.png>
@@ -1286,7 +1286,7 @@ luaotfload | load : no defaults for script "latn", falling back to "dflt" [2
 
 
 ]
-LaTeX Info: Redefining \anw@print on input line 20.
+LaTeX Info: Redefining \anw@print on input line 28.
 )
 \tf@toc=\write5
  [3]
@@ -1364,50 +1364,70 @@ Overfull \hbox (13.42271pt too wide) in paragraph at lines 74--75
 sity, Argonne National Laboratory,
  []
 
-) [17]
-Παράρτημα \MakeUppercase {α\anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 146.
-(./terminology.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [18
+) (./hdfs.tex [17]
+Κεφάλαιο 3.
+
+Overfull \hbox (2.72324pt too wide) in paragraph at lines 9--10
+\EU2/LinuxLibertineO(0)/m/n/12 Για τον λόγο αυτό υπάρ-χει 
+και μια υπη-ρε-σία που ονο-μά-ζε-ται SecondaryNameNo
+de
+ []
+
+
+Overfull \hbox (18.47913pt too wide) in paragraph at lines 9--10
+\EU2/LinuxLibertineO(0)/m/n/12 το σύ-στημα ει-δο-ποιεί το S
+econdaryNamenode να ανα-λά-βει την ευ-θύνη του Namenode
+ []
+
+[18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Overfull \hbox (11.62122pt too wide) in paragraph at lines 12--13
+\EU2/LinuxLibertineO(0)/m/n/12 τό-ματα.Μετά το handshake, το Data
+Node, εγ-γρά-φετε στον κα-τά-λογο του NameNode
+ []
+
+) [19] [20]
+Παράρτημα \MakeUppercase {α\anw@true \anw@print \relax }.
+LaTeX Info: Redefining \anw@print on input line 148.
+(./terminology.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+ [21
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (./thesis_template2015.aux (./blank_page.aux)
 (./blank_page.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package rerunfilecheck Info: File `thesis_template2015.out' has not changed.
+(rerunfilecheck)             Checksum: EEF2BBD731890BA6EB33815784F737A5;1835.
 
 
-Package rerunfilecheck Warning: File `thesis_template2015.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `thesis_template2015.out':
-(rerunfilecheck)             Before: 3EF9E933232F1BE0C90BDE9E0438D223;1251
-(rerunfilecheck)             After:  58CE177171EFA07DDE024ED48EE324C7;1533.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  )
 
 Here is how much of LuaTeX's memory you used:
- 22204 strings out of 493803
+ 22227 strings out of 493803
  100000,552014 words of node,token memory allocated
- 455 words of node memory still in use:
+ 460 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 3 glue, 2 kern, 1 penalty, 7 attribute, 55 glue_spe
 c, 7 attribute_list, 1 write nodes
-   avail lists: 1:1,2:7538,3:109,4:724,5:168,6:2440,7:111,8:19,9:153,10:358
- 25049 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:8316,3:114,4:714,5:218,6:2691,7:111,8:19,9:153,10:390
+ 25058 multiletter control sequences out of 65536+600000
  57 fonts using 9502271 bytes
- 49i,13n,50p,1593b,492s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 49i,13n,50p,2172b,492s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.o
 tf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R
 B.otf></usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertin
 e_R.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb>
-Output written on thesis_template2015.pdf (19 pages, 155689 bytes).
+Output written on thesis_template2015.pdf (22 pages, 162807 bytes).
 
-PDF statistics: 215 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 131072)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 270 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 131072)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,10 @@
+---
+  - name: Include requirement installation tasks.
+    include: requirements.yml
+    tags:
+      - requirements
+
+  - name: Include tasks for thrift-setup.
+    include: thrift-setup.yml
+    tags:
+     - thrift-setup

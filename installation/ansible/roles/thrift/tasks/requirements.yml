@@ -1,0 +1,7 @@
+---
+
+  - name: Install apt packages
+    stat: path={{ installation_path }}/get-pip.py
+    register: stat_result
+    tags:
+      - thrift-requirements
