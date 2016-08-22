@@ -11,7 +11,6 @@
 \usepackage{subfigure}
 % package to extend math capabilities
 \usepackage{amsmath,amssymb,isotope}
-\usepackage[version=3]{mhchem}
 %package to activate XeTeX font manager
 \usepackage{fontspec}
 
@@ -29,7 +28,7 @@
 \defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
 %\setromanfont [Ligatures={Common}, BoldFont={GFS Artemisia Bold}, ItalicFont={Gentium Italic}]{Gentium}
 %\setmonofont[Scale=0.8]{Monaco} 
-\setmainfont{Linux Libertine O}
+ \usepackage{libertine}
 
 % ---- CUSTOM AMPERSAND
 \newcommand{\amper}{{\fontspec[Scale=.95]{Gentium Italic}\selectfont\itshape\&}}
@@ -121,6 +120,8 @@
 
 %\chapter{Βιβλιογραφική Ανασκόπηση}
 %\input{thesis_theory}
+
+\input{lambda}
 
 \input{data_model}
 
