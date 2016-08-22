@@ -6,9 +6,10 @@
 
 \begin{figure}[t]
 \caption{Επίπεδα της Αρχιτεκτονικής Lambda}
-\includegraphics[width=8cm]{images/layers.png}
+\includegraphics[width=10cm]{images/layers.png}
 \centering
 \end{figure}
+\clearpage
 
 \section{Query}
 Αυτός ο πολύ απλός ορισμός των επιπέδων αρκεί, για αυτό το κεφάλαιο, για να γίνει κατανοητή η λειτουργία της Αρχιτεκτονικής Lambda. Όπως έχει αναφερθεί, το πρόβλημα που πρέπει να λυθεί είναι τα \textit{real-time analytics}.Αυτό μπορεί να συνοψιστεί, για λόγους απλότητας, σε μια πρόταση ως εξής:
@@ -26,7 +27,14 @@ query = function(all data)
 batch view = function (all data)
 query = function (batch view)
 \end{verbatim}
-Τα \textit{batch view} είναι \textit{indexed} για να είναι πιο γρήγορη και εύκολη η εύρεση του σωστού \textit{batch view} και να απαντηθεί το \textit{query} μέσα στον επιθυμητό χρόνο. Αυτή είναι η λειτουργία του πρώτου επιπέδου της Αρχιτεκτονικής, του \textit{batch layer}.
+Τα \textit{batch view} είναι \textit{indexed} για να είναι πιο γρήγορη και εύκολη η εύρεση του σωστού \textit{batch view} και να απαντηθεί το \textit{query} μέσα στον επιθυμητό χρόνο. Αυτή είναι η λειτουργία του πρώτου επιπέδου της Αρχιτεκτονικής, του \textit{batch layer}, το οποίο απεικονίζεται στο σχήμα 1.2 .
+
+\begin{figure}[t]
+\caption{Batch Layer}
+\includegraphics[width=12cm]{images/batch_layer.jpg}
+\centering
+\end{figure}
+\clearpage
 
 \subsection{Μειονεκτήματα}
 Το προφανές μειονέκτημα αυτής της υλοποίησης είναι η ανάγκη το σύστημα να γνωρίζει από πριν τις ερωτήσεις που θα του υποβληθούν στο μέλλον. Δεν υπάρχει η δυνατότητα να απαντήσει, σε \textit{real-time}, ερώτηση που δεν έχει καταχωρηθεί στις γνωστές. Επίσης από την στιγμή που θα εισαχθεί μια νέα ερώτηση, υπάρχει ένα χρονικό διάστημα που χρειάζεται για τον υπολογισμό των \textit{batch view} ώστε να είναι σε θέση να την απαντήσει. Αυτό το μειονέκτημα καθιστά την Αρχιτεκτονική Lambda λύση για ένα υποσύνολο των προβλημάτων που ανάγονται σε \textit{real-time analytics} προβλήματα.
