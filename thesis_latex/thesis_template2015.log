@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  22 AUG 2016 11:58
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  22 AUG 2016 12:22
  restricted \write18 enabled.
 **thesis_template2015.tex
 (./thesis_template2015.tex
@@ -348,7 +348,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.041 seconds)
+luaotfload | main : initialization completed in 0.039 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2068,19 +2068,25 @@ Package pdftex.def Info: images/layers.png used on input line 9.
 LaTeX Font Info:    Font shape `EU2/LinLibertine(5)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 16.
 luaotfload | load : path lookup of "LinLibertine_M.otf" unsuccessful, falling ba
-ck to file:
-<images/batch_layer.jpg, id=205, 496.85625pt x 305.14pt>
+ck to file: [7
+
+]
+<images/batch_layer.jpg, id=210, 496.85625pt x 305.14pt>
 File: images/batch_layer.jpg Graphic file (type jpg)
 
 <use images/batch_layer.jpg>
-Package pdftex.def Info: images/batch_layer.jpg used on input line 34.
+Package pdftex.def Info: images/batch_layer.jpg used on input line 42.
 (pdftex.def)             Requested size: 341.43306pt x 209.6901pt.
- [7
-
-] [8<./images/batch_layer.jpg>]
+ [8<./images/batch_layer.jpg>]
 luaotfload | load : path lookup of "LinLibertine_RB.otf" unsuccessful, falling b
-ack to file:)
-(./data_model.tex [9
+ack to file:
+Overfull \hbox (1.10287pt too wide) in paragraph at lines 51--52
+\EU2/LinLibertine(0)/m/n/12 σφα-λί-ζετε με τους μη-χα-νι-
+σμούς που προ-σφέ-ρει το σύ-στημα, χω-ρίς να 
+χρεια-
+ []
+
+) (./data_model.tex [9
 
 ]
 Κεφάλαιο 2.
@@ -2187,31 +2193,41 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
 (./blank_page.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
-Package rerunfilecheck Info: File `thesis_template2015.out' has not changed.
-(rerunfilecheck)             Checksum: 4DE7B9B86338E3F93D6BEC0D4AA7B10F;2174.
+
+
+Package rerunfilecheck Warning: File `thesis_template2015.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_template2015.out':
+(rerunfilecheck)             Before: 4DE7B9B86338E3F93D6BEC0D4AA7B10F;2174
+(rerunfilecheck)             After:  9873C540BC4BE59DF353D33FAA142AF5;2312.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32834 strings out of 495004
+ 32837 strings out of 495004
  100000,662416 words of node,token memory allocated
- 442 words of node memory still in use:
+ 443 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 3 glue, 1 kern, 1 penalty, 6 attribute, 51 glue_spe
 c, 6 attribute_list, 1 write nodes
-   avail lists: 2:362,3:123,4:714,5:218,6:2691,7:111,8:19,9:153,10:390
+   avail lists: 2:362,3:124,4:714,5:218,6:2691,7:111,8:19,9:153,10:390
  34819 multiletter control sequences out of 65536+600000
- 71 fonts using 12738591 bytes
+ 71 fonts using 12738627 bytes
  45i,13n,69p,2172b,489s stack positions out of 5000i,500n,10000p,200000b,100000s
+LuaTeX warning (dest): name{subsection.1.3.1} has been referenced but does not e
+xist, replaced by a fixed one
+
 </home/efi/texmf/fonts/opentype/public/libertine/LinLibertine_M.otf></home/efi/t
 exmf/fonts/opentype/public/libertine/LinLibertine_RI.otf></home/efi/texmf/fonts/
 opentype/public/libertine/LinLibertine_RB.otf></home/efi/texmf/fonts/opentype/pu
 blic/libertine/LinLibertine_R.otf></home/efi/texmf/fonts/opentype/public/liberti
 ne/LinLibertine_R.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb>
-Output written on thesis_template2015.pdf (27 pages, 203519 bytes).
+Output written on thesis_template2015.pdf (27 pages, 206155 bytes).
 
-PDF statistics: 334 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 131072)
+PDF statistics: 338 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 131072)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
