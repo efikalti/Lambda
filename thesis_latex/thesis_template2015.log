@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  22 AUG 2016 12:22
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  29 AUG 2016 11:56
  restricted \write18 enabled.
 **thesis_template2015.tex
 (./thesis_template2015.tex
@@ -348,7 +348,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.039 seconds)
+luaotfload | main : initialization completed in 0.041 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -1965,7 +1965,7 @@ LaTeX Info: Redefining \nameref on input line 95.
 \openout4 = thesis_template2015.out
 LaTeX Info: Redefining \Ref on input line 95.
  (./thesis_title.tex
-<aristotle_logo.png, id=132, 278.54062pt x 209.28188pt>
+<aristotle_logo.png, id=140, 278.54062pt x 209.28188pt>
 File: aristotle_logo.png Graphic file (type png)
 
 <use aristotle_logo.png>
@@ -2035,7 +2035,7 @@ ack to file: [2
 
 
 ]
-LaTeX Info: Redefining \anw@print on input line 33.
+LaTeX Info: Redefining \anw@print on input line 35.
 )
 \tf@toc=\write5
 
@@ -2047,15 +2047,8 @@ LaTeX Info: Redefining \anw@print on input line 33.
 
 ] (./lambda.tex
 Κεφάλαιο 1.
-
-Overfull \hbox (1.2392pt too wide) in paragraph at lines 2--3
-\EU2/LinLibertine(0)/m/n/12 Big Data συ-στή-ματα εί-ναι η εύ-
-ρεση λύ-σης/απάν-τη-σης σε πραγ-μα-τικό χρόν
-ο.Κατά
- []
-
 luaotfload | load : path lookup of "LinLibertine_RB.otf" unsuccessful, falling b
-ack to file: <images/layers.png, id=194, 281.05pt x 335.2525pt>
+ack to file: <images/layers.png, id=204, 281.05pt x 335.2525pt>
 File: images/layers.png Graphic file (type png)
  <use images/layers.png>
 Package pdftex.def Info: images/layers.png used on input line 9.
@@ -2071,26 +2064,29 @@ luaotfload | load : path lookup of "LinLibertine_M.otf" unsuccessful, falling ba
 ck to file: [7
 
 ]
-<images/batch_layer.jpg, id=210, 496.85625pt x 305.14pt>
+LaTeX Info: Redefining \anw@print on input line 42.
+LaTeX Info: Redefining \anw@print on input line 43.
+
+<images/batch_layer.jpg, id=220, 496.85625pt x 305.14pt>
 File: images/batch_layer.jpg Graphic file (type jpg)
 
 <use images/batch_layer.jpg>
-Package pdftex.def Info: images/batch_layer.jpg used on input line 42.
+Package pdftex.def Info: images/batch_layer.jpg used on input line 50.
 (pdftex.def)             Requested size: 341.43306pt x 209.6901pt.
- [8<./images/batch_layer.jpg>]
+ [8] [9<./images/batch_layer.jpg>]
 luaotfload | load : path lookup of "LinLibertine_RB.otf" unsuccessful, falling b
 ack to file:
-Overfull \hbox (1.10287pt too wide) in paragraph at lines 51--52
+Overfull \hbox (1.10287pt too wide) in paragraph at lines 59--60
 \EU2/LinLibertine(0)/m/n/12 σφα-λί-ζετε με τους μη-χα-νι-
 σμούς που προ-σφέ-ρει το σύ-στημα, χω-ρίς να 
 χρεια-
  []
 
-) (./data_model.tex [9
+) (./data_model.tex [10
 
 ]
 Κεφάλαιο 2.
-[10
+[11
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 22--24
@@ -2102,14 +2098,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-[11] [12]
+[12] [13]
 Overfull \hbox (4.63911pt too wide) in paragraph at lines 45--46
 [][]\EU2/LinLibertine(0)/m/n/12 Σε αρ-κε-τές πε-ρι-πτώ-σει
 ς ευαί-σθη-των και ιδιω-τι-κών δε-δο-μέ-νων, 
 απαι-
  []
 
-[13]) [14] (./master_dataset_store.tex [15]
+[14]) [15] (./master_dataset_store.tex [16]
 Κεφάλαιο 3.
 
 Overfull \hbox (12.52937pt too wide) in paragraph at lines 3--4
@@ -2118,7 +2114,7 @@ Overfull \hbox (12.52937pt too wide) in paragraph at lines 3--4
 dataset
  []
 
-[16
+[17
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
@@ -2142,22 +2138,22 @@ Overfull \hbox (81.13269pt too wide) in paragraph at lines 20--30
  [][][] 
  []
 
-[17] [18] [19
+[18] [19] [20
 
-] [20]
+] [21]
 Overfull \hbox (22.29434pt too wide) in paragraph at lines 58--60
 [][]\EU2/LinLibertine(0)/m/n/12 Όπως ανα-φέρ-θηκε, υπάρ-χο
 υν πολ-λές έτοι-μες υλο-ποι-ή-σεις Distributed Filesy
 stem.
  []
 
-[21]
+[22]
 Overfull \hbox (13.42271pt too wide) in paragraph at lines 74--75
 [][]\EU2/LinLibertine(0)/m/n/12 Parallel Virtual File System (Clemson Universit
 y, Argonne National Laboratory,
  []
 
-) (./hdfs.tex [22]
+) (./hdfs.tex [23]
 Κεφάλαιο 4.
 
 Overfull \hbox (2.72324pt too wide) in paragraph at lines 9--10
@@ -2172,7 +2168,7 @@ Overfull \hbox (18.47913pt too wide) in paragraph at lines 9--10
 ndaryNamenode να ανα-λά-βει την ευ-θύνη του Namenode
  []
 
-[23
+[24
 
 ]
 Overfull \hbox (11.62122pt too wide) in paragraph at lines 12--13
@@ -2180,12 +2176,12 @@ Overfull \hbox (11.62122pt too wide) in paragraph at lines 12--13
 e, εγ-γρά-φετε στον κα-τά-λογο του NameNode
  []
 
-) [24] [25]
+) [25] [26]
 Παράρτημα \MakeUppercase {α\anw@true \anw@print \relax }.
 LaTeX Info: Redefining \anw@print on input line 149.
 (./terminology.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
- [26
+ [27
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
@@ -2193,41 +2189,31 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
 (./blank_page.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
-
-
-Package rerunfilecheck Warning: File `thesis_template2015.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis_template2015.out':
-(rerunfilecheck)             Before: 4DE7B9B86338E3F93D6BEC0D4AA7B10F;2174
-(rerunfilecheck)             After:  9873C540BC4BE59DF353D33FAA142AF5;2312.
+Package rerunfilecheck Info: File `thesis_template2015.out' has not changed.
+(rerunfilecheck)             Checksum: 9873C540BC4BE59DF353D33FAA142AF5;2312.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32837 strings out of 495004
+ 32843 strings out of 495004
  100000,662416 words of node,token memory allocated
  443 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 3 glue, 1 kern, 1 penalty, 6 attribute, 51 glue_spe
 c, 6 attribute_list, 1 write nodes
-   avail lists: 2:362,3:124,4:714,5:218,6:2691,7:111,8:19,9:153,10:390
- 34819 multiletter control sequences out of 65536+600000
- 71 fonts using 12738627 bytes
- 45i,13n,69p,2172b,489s stack positions out of 5000i,500n,10000p,200000b,100000s
-LuaTeX warning (dest): name{subsection.1.3.1} has been referenced but does not e
-xist, replaced by a fixed one
-
+   avail lists: 2:394,3:135,4:714,5:218,6:2821,7:111,8:21,9:153,10:390
+ 34821 multiletter control sequences out of 65536+600000
+ 71 fonts using 12738663 bytes
+ 45i,13n,69p,2172b,473s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/efi/texmf/fonts/opentype/public/libertine/LinLibertine_M.otf></home/efi/t
 exmf/fonts/opentype/public/libertine/LinLibertine_RI.otf></home/efi/texmf/fonts/
 opentype/public/libertine/LinLibertine_RB.otf></home/efi/texmf/fonts/opentype/pu
 blic/libertine/LinLibertine_R.otf></home/efi/texmf/fonts/opentype/public/liberti
 ne/LinLibertine_R.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb>
-Output written on thesis_template2015.pdf (27 pages, 206155 bytes).
+Output written on thesis_template2015.pdf (28 pages, 208659 bytes).
 
-PDF statistics: 338 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 131072)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 353 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 131072)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
