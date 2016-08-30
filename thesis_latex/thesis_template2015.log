@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  29 AUG 2016 15:50
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.22)  30 AUG 2016 12:08
  restricted \write18 enabled.
 **thesis_template2015.tex
 (./thesis_template2015.tex
@@ -348,7 +348,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.040 seconds)
+luaotfload | main : initialization completed in 0.041 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -2048,11 +2048,15 @@ LaTeX Info: Redefining \anw@print on input line 39.
 ] (./lambda.tex
 Κεφάλαιο 1.
 luaotfload | load : path lookup of "LinLibertine_RB.otf" unsuccessful, falling b
-ack to file: <images/layers.png, id=229, 281.05pt x 335.2525pt>
+ack to file: <images/layers.png, id=229, 963.6pt x 722.7pt>
 File: images/layers.png Graphic file (type png)
  <use images/layers.png>
 Package pdftex.def Info: images/layers.png used on input line 9.
-(pdftex.def)             Requested size: 284.52756pt x 339.42084pt.
+(pdftex.def)             Requested size: 398.33858pt x 298.74599pt.
+
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 9--11
+ [][][] 
+ []
 
 [6
 
@@ -2067,13 +2071,18 @@ ck to file: [8
 LaTeX Info: Redefining \anw@print on input line 42.
 LaTeX Info: Redefining \anw@print on input line 43.
 
-<images/batch_layer.jpg, id=245, 496.85625pt x 305.14pt>
-File: images/batch_layer.jpg Graphic file (type jpg)
+<images/batch_layer.png, id=245, 963.6pt x 722.7pt>
+File: images/batch_layer.png Graphic file (type png)
 
-<use images/batch_layer.jpg>
-Package pdftex.def Info: images/batch_layer.jpg used on input line 50.
-(pdftex.def)             Requested size: 341.43306pt x 209.6901pt.
- [9] [10<./images/batch_layer.jpg>]
+<use images/batch_layer.png>
+Package pdftex.def Info: images/batch_layer.png used on input line 50.
+(pdftex.def)             Requested size: 398.33858pt x 298.74599pt.
+
+Overfull \hbox (0.85359pt too wide) in paragraph at lines 50--52
+ [][][] 
+ []
+
+[9] [10<./images/batch_layer.png>]
 luaotfload | load : path lookup of "LinLibertine_RB.otf" unsuccessful, falling b
 ack to file:
 Overfull \hbox (1.10287pt too wide) in paragraph at lines 59--60
@@ -2082,13 +2091,18 @@ Overfull \hbox (1.10287pt too wide) in paragraph at lines 59--60
 χρεια-
  []
 
-<images/serving_layer.png, id=260, 358.33875pt x 194.7275pt>
+<images/serving_layer.png, id=261, 963.6pt x 722.7pt>
 File: images/serving_layer.png Graphic file (type png)
 
 <use images/serving_layer.png>
 Package pdftex.def Info: images/serving_layer.png used on input line 74.
-(pdftex.def)             Requested size: 341.43306pt x 185.55164pt.
- [11
+(pdftex.def)             Requested size: 426.79134pt x 320.0842pt.
+
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 74--76
+ [][][] 
+ []
+
+[11
 
 ] [12<./images/serving_layer.png>]
 Overfull \hbox (3.81003pt too wide) in paragraph at lines 83--84
@@ -2112,18 +2126,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
-<images/speed_layer.png, id=275, 395.4775pt x 187.70125pt>
+<images/speed_layer.png, id=276, 963.6pt x 722.7pt>
 File: images/speed_layer.png Graphic file (type png)
 
 <use images/speed_layer.png>
 Package pdftex.def Info: images/speed_layer.png used on input line 109.
-(pdftex.def)             Requested size: 341.43306pt x 162.05289pt.
- [14] [15<./images/speed_layer.png>]
-<images/lambda.png, id=286, 956.57375pt x 519.9425pt>
+(pdftex.def)             Requested size: 426.79134pt x 320.0842pt.
+
+Overfull \hbox (29.30635pt too wide) in paragraph at lines 109--111
+ [][][] 
+ []
+
+[14] [15<./images/speed_layer.png>]
+<images/lambda.png, id=287, 963.6pt x 722.7pt>
 File: images/lambda.png Graphic file (type png)
  <use images/lambda.png>
 Package pdftex.def Info: images/lambda.png used on input line 127.
-(pdftex.def)             Requested size: 426.79134pt x 231.9806pt.
+(pdftex.def)             Requested size: 426.79134pt x 320.0842pt.
 
 Overfull \hbox (29.30635pt too wide) in paragraph at lines 127--129
  [][][] 
@@ -2250,7 +2269,7 @@ Here is how much of LuaTeX's memory you used:
 c, 6 attribute_list, 1 write nodes
    avail lists: 2:464,3:157,4:714,5:218,6:2821,7:111,8:24,9:161,10:390
  34837 multiletter control sequences out of 65536+600000
- 71 fonts using 12738591 bytes
+ 71 fonts using 12738735 bytes
  45i,13n,69p,2172b,489s stack positions out of 5000i,500n,10000p,200000b,100000s
 </home/efi/texmf/fonts/opentype/public/libertine/LinLibertine_M.otf></home/efi/t
 exmf/fonts/opentype/public/libertine/LinLibertine_RI.otf></home/efi/texmf/fonts/
@@ -2258,9 +2277,9 @@ opentype/public/libertine/LinLibertine_RB.otf></home/efi/texmf/fonts/opentype/pu
 blic/libertine/LinLibertine_R.otf></home/efi/texmf/fonts/opentype/public/liberti
 ne/LinLibertine_R.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam10.pfb>
-Output written on thesis_template2015.pdf (35 pages, 336872 bytes).
+Output written on thesis_template2015.pdf (35 pages, 284092 bytes).
 
-PDF statistics: 412 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 414 PDF objects out of 1000 (max. 8388607)
  345 compressed objects within 4 object streams
  84 named destinations out of 1000 (max. 131072)
  305 words of extra memory for PDF output out of 10000 (max. 10000000)
