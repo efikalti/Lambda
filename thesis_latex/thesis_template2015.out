@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter.1}{Αρχιτεκτονική Lambda}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Επίπεδα}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Query}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Προΰπολογισμός}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Προϋπολογισμός}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{Batch Layer}{chapter.1}% 5
 \BOOKMARK [2][-]{subsection.1.4.1}{Πλεονεκτήματα}{section.1.4}% 6
 \BOOKMARK [2][-]{subsection.1.4.2}{Μειονεκτήματα}{section.1.4}% 7

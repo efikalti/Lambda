@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Αρχιτεκτονική Lambda}{6}{chapter.1}
 \contentsline {section}{\numberline {1.}Επίπεδα}{6}{section.1.1}
 \contentsline {section}{\numberline {2.}Query}{8}{section.1.2}
-\contentsline {section}{\numberline {3.}Προΰπολογισμός}{8}{section.1.3}
+\contentsline {section}{\numberline {3.}Προϋπολογισμός}{8}{section.1.3}
 \contentsline {section}{\numberline {4.}Batch Layer}{9}{section.1.4}
 \contentsline {subsection}{\numberline {4.1}Πλεονεκτήματα}{11}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {4.2}Μειονεκτήματα}{11}{subsection.1.4.2}
