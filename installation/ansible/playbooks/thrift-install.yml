@@ -1,6 +1,0 @@
----
-
-  - hosts: thrift
-    user: root
-    roles:
-      - thrift

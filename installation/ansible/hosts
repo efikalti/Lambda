@@ -1,12 +1,14 @@
 # Hadoop group of nodes
-[hadoop]
+[hadoop:children]
+master
+slaves
 
 # Master server
-[hadoop:master]
+[master]
 localhost
 
 # List of slave servers
-[hadoop:slaves]
+[slaves]
 localhost
 
 # Elasticsearch nodes
@@ -15,12 +17,4 @@ localhost
 
 # Supervisor nodes
 [supervisor]
-localhost
-
-# Logstash nodes
-[logstash]
-localhost
-
-# Thrift nodes
-[thrift]
 localhost

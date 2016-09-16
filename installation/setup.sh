@@ -34,7 +34,6 @@ echo_packages(){
   echoinfo "The following packages are required from the Lambda project to run:"
   echo_green "1. Hadoop version 2.7 or greater."
   echo_green "2. Elasticsearch version 2.2 or greater."
-  echo_green "3. Logstash version 2.3 or greater."
   echo_green "4. Supervisord version 2.2 or greater."
   echo
   echoinfo "You can select from 0 (none) to 4 (all) packages to be installed."
@@ -75,6 +74,18 @@ echo_packages(){
 
 }
 
+install_ansible(){
+  echoinfo  "Installing Ansible...";
+  echo
+  if [ "$1" = "Ubuntu" ];
+    then
+        apt install -y ansible
+    else if [ "$1" = "Centos" ];
+      then
+        yum install -y git
+    fi
+  fi
+}
 
 # Function to check if Git is present in the system and install it if not.
 git_check() {
@@ -103,7 +114,7 @@ git_check() {
 
   # Check if ansible is already present in /tmp/ folder from previous tries
   if [ ! -d "/tmp/ansible/" ]; then
-    echoinfo  "Cloning anible repository in /tmp/ ...";
+    echoinfo  "Cloning ansible repository in /tmp/ ...";
     git clone git://github.com/ansible/ansible.git /tmp/ansible --recursive
   fi
 
@@ -121,7 +132,9 @@ git_check() {
 
 # Function to run the ansible script for cluster installation
 run_ansible() {
-  command="ansible-playbook playbooks/hadoop-install.yml --list-tasks"
+  cd "ansible"
+  # command="ansible-playbook playbooks/hadoop-install.yml --list-tasks"
+  command="ansible-playbook playbooks/hadoop-install.yml"
   eval $command
   echo "finished"
   exit 0;
@@ -152,13 +165,26 @@ fi
 echoinfo $OS $VER x$ARCH
 echo
 
+echoinfo  "The computer running the installation process needs password-less ssh access to the host machines.";
+echoinfo  "Make sure you can ssh to the hosts and press [ENTER] to continue with the process or anything else to terminate it.";
+
+read -s -n 1 key
+if [[ $key = "" ]]; then
+  echo
+  echoinfo "Installation will continue now."
+else
+  echo
+  echoinfo "Installation will terminate now."
+  exit 1;
+fi
+
+
 # Check if ansible is installed in the system
 command -v ansible >/dev/null 2>&1 ||
 {
   # Try to install git if system is Ubuntu or Centos
   echowarn  "Ansible is required but it's not installed.";
-  echoinfo  "Ansible installation requires git.";
-  git_check $OS
+  install_ansible $OS
 }
 
 # Print Ansible installed version
