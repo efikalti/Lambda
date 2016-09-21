@@ -34,7 +34,7 @@ echo_packages(){
   echoinfo "The following packages are required from the Lambda project to run:"
   echo_green "1. Hadoop version 2.7 or greater."
   echo_green "2. Elasticsearch version 2.2 or greater."
-  echo_green "4. Supervisord version 2.2 or greater."
+  echo_green "3. Supervisord version 2.2 or greater."
   echo
   echoinfo "You can select from 0 (none) to 4 (all) packages to be installed."
   echoinfo "Type the numbers of the packages you want separated by spaces and press [ENTER]."
@@ -52,9 +52,6 @@ echo_packages(){
           elastic=true
           ;;
         [3])
-          logstash=true
-          ;;
-        [4])
           supervisord=true
           ;;
     esac
