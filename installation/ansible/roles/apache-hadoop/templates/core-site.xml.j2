@@ -19,7 +19,7 @@
 <configuration>
   <property>
     <name>fs.defaultFS</name>
-    <value>hdfs://{{ groups.master | replace("[","") | replace("'","") | replace("]","") }}:9000</value>
+    <value>hdfs://{{ groups.master | replace("u","") | replace("[","") | replace("'","") | replace("]","") }}:9000</value>
   </property>
   <property>
     <name>hadoop.tmp.dir</name>

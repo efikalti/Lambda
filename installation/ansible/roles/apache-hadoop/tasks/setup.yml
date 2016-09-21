@@ -37,7 +37,7 @@
       - configure
 
   - name: Configure Apache HDFS for slave nodes.
-    template: src=hdfs-site-slave.xml.j2 dest="{{ installation_path }}/hadoop/etc/hadoop/hdfs-site.xml" backup=no owner={{ user }} group={{ user }} mode=0644
+    template: src=hdfs-site-slave.xml.j2 dest="{{ installation_path }}/hadoop/etc/hadoop/hdfs-site-slave.xml" backup=no owner={{ user }} group={{ user }} mode=0644
     when: "'slaves' in group_names"
     tags:
       - configure

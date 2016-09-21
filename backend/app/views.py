@@ -15,8 +15,8 @@ class UserViewSet(viewsets.GenericViewSet):
 
         if start is not None:
             bashCommand = "cwm --rdf test.rdf --ntriples > test.nt"
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output = process.communicate()[0]
+            process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+            output = process.communicate()[0]
 
 
 
