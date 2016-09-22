@@ -54,6 +54,11 @@ echo_packages(){
         [3])
           supervisord=true
           ;;
+        [4])
+          supervisord=true
+          elastic=true
+          hadoop=true
+          ;;
     esac
   done
 
@@ -65,7 +70,7 @@ echo_packages(){
 
   cd "$(dirname "ansible")"
   if $hadoop;
-    then run_ansible $hadoop
+    then run_ansible "hadoop"
   fi
 
 
@@ -74,10 +79,10 @@ echo_packages(){
 install_ansible(){
   echoinfo  "Installing Ansible...";
   echo
-  if [ "$1" = "Ubuntu" ];
+  if [ "$1" -eq "Ubuntu" ];
     then
         apt install -y ansible
-    else if [ "$1" = "Centos" ];
+    else if [ "$1" -eq "Centos" ];
       then
         yum install -y git
     fi
@@ -94,10 +99,10 @@ git_check() {
     echowarn  "Git is required but it's not installed.";
     echoinfo  "Installing Git...";
     echo
-    if [ "$1" = "Ubuntu" ];
+    if [ "$1" -eq "Ubuntu" ];
       then
           apt-get install -y git
-      else if [ "$1" = "Centos" ];
+      else if [ "$1" -eq "Centos" ];
         then
           yum install -y git
       fi
@@ -130,8 +135,13 @@ git_check() {
 # Function to run the ansible script for cluster installation
 run_ansible() {
   cd "ansible"
-  # command="ansible-playbook playbooks/hadoop-install.yml --list-tasks"
-  command="ansible-playbook playbooks/hadoop-install.yml"
+
+  if [ "$1" == "hadoop" ];
+    then
+        command="ansible-playbook playbooks/hadoop-install.yml"
+        eval $command
+  fi
+
   eval $command
   echo "finished"
   exit 0;
@@ -166,7 +176,7 @@ echoinfo  "The computer running the installation process needs password-less ssh
 echoinfo  "Make sure you can ssh to the hosts and press [ENTER] to continue with the process or anything else to terminate it.";
 
 read -s -n 1 key
-if [[ $key = "" ]]; then
+if [[ $key -eq "" ]]; then
   echo
   echoinfo "Installation will continue now."
 else
