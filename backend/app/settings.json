@@ -1,0 +1,1 @@
+{ "hadoop": { "master" : "localhost" , "paths": {"hadoop_home" : "/usr/local/hadoop" , "bin" : "/bin" , "sbin" : "/sbin"} , "slaves" : ["localhost"], "actions": {"start": "start-all.sh", "stop": "stop-all.sh"} } }

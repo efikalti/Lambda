@@ -7,9 +7,8 @@ from django.contrib import admin
 from rest_framework import routers
 from app import views
 
-
 router = routers.DefaultRouter()
-router.register(r'api/hadoop/?', views.HadoopViewSet)
+router.register(r'api/hadoop/?', views.HadoopViewSet, base_name='hadoop')
 
 
 urlpatterns = [

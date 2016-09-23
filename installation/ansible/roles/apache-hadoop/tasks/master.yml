@@ -8,7 +8,7 @@
 
   - name: Format Apache HDFS.
     command: "{{ installation_path }}/hadoop/bin/hadoop namenode -format"
-    become_user: {{ user }}
+    become_user: "{{ user }}"
     tags:
       - format-hdfs
 
