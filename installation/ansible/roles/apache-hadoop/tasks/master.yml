@@ -7,28 +7,43 @@
     template: src=yarn-init.j2 dest=/etc/init.d/yarn-init owner={{ user }} group={{ user }} mode=0740
 
   - name: Format Apache HDFS.
-    command: "{{ installation_path }}/hadoop/bin/hadoop namenode -format"
+    become: true
     become_user: "{{ user }}"
+    expect:
+      command: "{{ installation_path }}/hadoop/bin/hadoop namenode -format"
+      responses:
+        (?i)(Y or N): "Y"
     tags:
       - format-hdfs
 
   - name: Start Apache HDFS.
-    command: "{{ installation_path }}/hadoop/sbin/start-dfs.sh"
+    become: true
+    become_user: "{{ user }}"
+    expect:
+      command: "{{ installation_path }}/hadoop/sbin/start-dfs.sh"
+      responses:
+        (?i)y: "y"
     tags:
       - start-hadoop
 
   - name: Start Apache Yarn.
     command: "{{ installation_path }}/hadoop/sbin/start-yarn.sh"
+    become: true
+    become_user: "{{ user }}"
     tags:
       - start-hadoop
 
   - name: Create Apache HDFS user directory.
     command: "{{ installation_path }}/hadoop/bin/hadoop fs -mkdir /user"
+    become: true
+    become_user: "{{ user }}"
     tags:
       - create-dirs
 
   - name: Create Apache HDFS user/{{user}} directory.
     command: "{{ installation_path }}/hadoop/bin/hadoop fs -mkdir /user/{{ user }}"
+    become: true
+    become_user: "{{ user }}"
     tags:
       - create-dirs
 
@@ -38,5 +53,6 @@
       content="export HADOOP_HOME='/usr/local/hadoop'
       PATH=$PATH:$HADOOP_HOME/bin
       PATH=$PATH:$HADOOP_HOME/sbin"
+    become_user: "{{ user }}"
     tags:
       - add-path

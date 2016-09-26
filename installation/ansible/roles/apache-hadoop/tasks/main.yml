@@ -12,6 +12,6 @@
   - name: Include tasks for master.
     include: master.yml
     when: "'master' in group_names"
-    when: stat_result.stat.exists == False
+    #when: stat_result.stat.exists == False
     tags:
      - master-install

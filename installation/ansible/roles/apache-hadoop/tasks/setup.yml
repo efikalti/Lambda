@@ -11,7 +11,7 @@
       - download
 
   - name: Create softlink for Apache Hadoop.
-    file: src="{{ installation_path }}/hadoop-{{ version }}" dest="{{ installation_path }}/hadoop" state=link
+    file: src="{{ installation_path }}/hadoop-{{ version }}" dest="{{ installation_path }}/hadoop" state=link owner={{ user }} group={{ user }}
     tags:
       - download
 

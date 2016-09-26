@@ -23,6 +23,6 @@ class HadoopViewSet(viewsets.ViewSet):
             hadoop_settings = settings.get_hadoop_settings(["paths", "actions"])
             action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["sbin"] + "/" + hadoop_settings["actions"][action]
             print action
-            
+
             process = subprocess.Popen(action.split(), stdout=subprocess.PIPE)
-        return Response(status=status.HTTP_200_OK)
+        return Response({"output": stdout}status=status.HTTP_200_OK)

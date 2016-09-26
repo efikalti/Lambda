@@ -1,2 +1,5 @@
 django == 1.8.6
 djangorestframework == 3.3.1
+mod_wsgi-httpd == 2.4.12.6
+mod_wsgi == 4.5.7
+pexpect == 4.2.1
