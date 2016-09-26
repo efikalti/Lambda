@@ -1,5 +1,10 @@
 # HADOOP INSTALLATION
 - pass user as variable in ansible
 - setup passwordless ssh for this user to the hosts
-- add hadoop-home variables to the path of the user
 - hostnames for slave and master in hosts ansible file
+- add jps
+
+# Django installation
+- setup hosting with apache
+
+See what happens for pseudo distributed cluster
