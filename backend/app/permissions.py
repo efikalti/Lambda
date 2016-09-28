@@ -1,8 +1,8 @@
-from functions import check_hadoop_services
+from functions import check_hadoop_services, check_local_path
 from .exceptions import CustomRequestFailed
 from rest_framework import permissions
 
-actions= ['start', 'stop', 'restart', 'upload']
+actions= ['start', 'stop', 'restart', 'upload', 'run']
 
 class HadoopPermission(permissions.BasePermission):
     """
@@ -24,7 +24,17 @@ class HadoopPermission(permissions.BasePermission):
 
         # Check validity of request parameters per request method
         method = request.META['REQUEST_METHOD']
-        if method == 'GET':
-            pass
+        if method == 'POST':
+            if action == 'upload':
+                path = request.data.get("path")
+                dest = request.data.get("dest")
+                if path is None or dest is None:
+                    raise CustomRequestFailed("No path or dest values provided.")
+                check_local_path(path)
+            elif action == 'run':
+                path = request.data.get("path")
+                if path is None:
+                    raise CustomRequestFailed("No path value provided.")
+                check_local_path(path)
 
         return True

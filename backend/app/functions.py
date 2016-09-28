@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 services = ['NodeManager', 'DataNode', 'NameNode', 'ResourceManager', 'SecondaryNameNode']
 
@@ -17,3 +18,10 @@ def check_hadoop_services():
         if service not in output:
             all_running = False
     return all_running
+
+
+def check_local_path(path):
+    if not os.path.exists(path):
+        raise CustomRequestFailed("The prodided path does not exist.")
+    elif not os.access(os.path.dirname(path), os.R_OK):
+        raise CustomRequestFailed("This user does not have read permissions for this file.")
