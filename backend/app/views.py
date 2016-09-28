@@ -26,6 +26,7 @@ class HadoopViewSet(viewsets.ViewSet):
 
         action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["sbin"] + "/" + hadoop_settings["actions"][action]
         run_command(action)
+
         return Response(status=status.HTTP_200_OK)
 
 
@@ -40,10 +41,9 @@ class HadoopViewSet(viewsets.ViewSet):
             try:
                 action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["bin"] + "/hadoop " + hadoop_settings["actions"][action] + " " + path + " " + dest
                 run_command(action)
-                return Response(status=status.HTTP_200_OK)
             except:
                 raise CustomRequestFailed("Something went wrong while trying to upload.")
-        if action == 'run':
+        elif action == 'run':
             path = request.data.get("path")
 
         return Response(status=status.HTTP_200_OK)
