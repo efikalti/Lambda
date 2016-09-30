@@ -45,5 +45,11 @@ class HadoopViewSet(viewsets.ViewSet):
                 raise CustomRequestFailed("Something went wrong while trying to upload.")
         elif action == 'run':
             path = request.data.get("path")
-
+            args = request.data.get("args")
+            # Try to run
+            try:
+                action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["bin"] + "/hadoop " + hadoop_settings["actions"][action] + " " + path + " " + args
+                run_command(action)
+            except:
+                raise CustomRequestFailed("Something went wrong while trying to run the job.")
         return Response(status=status.HTTP_200_OK)

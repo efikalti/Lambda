@@ -19,7 +19,9 @@ class HadoopPermission(permissions.BasePermission):
             message = "The provided action " + action + ", is not in the list of accepted actions: [" + keys + "]."
             raise CustomRequestFailed(message)
         running = check_hadoop_services()
-        if action is not "stop" and not running:
+        if action == "start" and running:
+            raise CustomRequestFailed("All of the hadoop services are running.")
+        elif (action != "stop" and action != "start") and not running:
             raise CustomRequestFailed("Not all of the hadoop services are running.Start them and try again.")
 
         # Check validity of request parameters per request method
@@ -33,6 +35,7 @@ class HadoopPermission(permissions.BasePermission):
                 check_local_path(path)
             elif action == 'run':
                 path = request.data.get("path")
+                args = request.data.get("args")
                 if path is None:
                     raise CustomRequestFailed("No path value provided.")
                 check_local_path(path)
