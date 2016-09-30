@@ -11,13 +11,23 @@ def run_command(command=None, return_out=False):
     print process.communicate()[0]
 
 
-def check_hadoop_services():
+def check_hadoop_services(complete_output=False):
     output = run_command("jps", True)
     all_running = True
-    for service in services:
-        if service not in output:
-            all_running = False
-    return all_running
+    if complete_output:
+        running_services = list()
+        stopped_services = list()
+        for service in services:
+            if service in output:
+                running_services.append(service)
+            else:
+                stopped_services.append(service)
+        return running_services, stopped_services
+    else:
+        for service in services:
+            if service not in output:
+                all_running = False
+        return all_running
 
 
 def check_local_path(path):

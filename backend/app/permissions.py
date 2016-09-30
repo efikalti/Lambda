@@ -2,7 +2,7 @@ from functions import check_hadoop_services, check_local_path
 from .exceptions import CustomRequestFailed
 from rest_framework import permissions
 
-actions= ['start', 'stop', 'restart', 'upload', 'run']
+actions= ['start', 'stop', 'restart', 'upload', 'run', 'check']
 
 class HadoopPermission(permissions.BasePermission):
     """
@@ -36,8 +36,8 @@ class HadoopPermission(permissions.BasePermission):
             elif action == 'run':
                 path = request.data.get("path")
                 args = request.data.get("args")
-                if path is None:
-                    raise CustomRequestFailed("No path value provided.")
+                if path is None or args is None:
+                    raise CustomRequestFailed("No path or args values provided.")
                 check_local_path(path)
 
         return True
