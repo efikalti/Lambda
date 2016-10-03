@@ -1,0 +1,17 @@
+{
+  "name": "Lambda-dashboard",
+  "description": "Lambda dashboard project",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "bootstrap": "3.3.x",
+    "rdash-ui": "1.0.*",
+    "angular-cookies": "~1.5.0",
+    "angular-bootstrap": "~1.0.3",
+    "font-awesome": "~4.5.0",
+    "angular-ui-router": "^0.2.15"
+  }
+}
