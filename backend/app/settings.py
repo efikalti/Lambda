@@ -5,14 +5,17 @@ import json
 from StringIO import StringIO
 
 def get_hadoop_settings(items=None):
-    try:
-        with open('app/settings.json') as file:
-            data = json.load(file)
-            if items is None:
-                return data["hadoop"]
-            hadoop = dict()
-            for item in items:
-                hadoop[item] = data["hadoop"][item]
-            return hadoop
-    except IOError as e:
-        print( e )
+    data = hadoop_settings
+    if items is None:
+        return data
+    hadoop = dict()
+    for item in items:
+        hadoop[item] = data[item]
+    return hadoop
+
+hadoop_settings = {
+"master" : "localhost" ,
+"paths": {"hadoop_home" : "/usr/local/hadoop" , "bin" : "/bin" , "sbin" : "/sbin"} ,
+"slaves" : ["localhost"],
+"actions": {"start": "start-all.sh", "stop": "stop-all.sh", "restart": "restart", "upload": "fs -put", "run": "jar"}
+}

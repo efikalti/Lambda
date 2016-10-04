@@ -8,7 +8,6 @@ from functions import run_command, check_local_path, check_hadoop_services
 import settings
 import os
 
-
 class HadoopViewSet(viewsets.ViewSet):
     """
     API endpoint that controls the hadoop framework.
@@ -24,13 +23,13 @@ class HadoopViewSet(viewsets.ViewSet):
             return Response({"running_services": running, "stopped_services": stopped}, status=status.HTTP_200_OK)
         if action == 'restart':
             restart = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["sbin"] + "/" + hadoop_settings["actions"]['stop']
-            run_command(restart)
+            output = run_command(restart, True)
             action = 'start'
 
         action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["sbin"] + "/" + hadoop_settings["actions"][action]
-        run_command(action)
+        output = run_command(action, True)
 
-        return Response(status=status.HTTP_200_OK)
+        return Response({"output": output}, status=status.HTTP_200_OK)
 
 
     def create(self, request):
