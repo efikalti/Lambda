@@ -21,7 +21,7 @@ class HadoopPermission(permissions.BasePermission):
         running = check_hadoop_services()
         if action == "start" and running:
             raise CustomRequestFailed("All of the hadoop services are running.")
-        elif (action != "stop" and action != "start") and not running:
+        elif (action != "stop" and action != "start" and action != "check") and not running:
             raise CustomRequestFailed("Not all of the hadoop services are running.Start them and try again.")
 
         # Check validity of request parameters per request method

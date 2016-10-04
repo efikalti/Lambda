@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-server" title="Services">
+        <a href="#">Overview</a>
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr ng-repeat="service in running"><td>{{service}}</td><td><span class="text-danger"><p>Running</p></span><span class="text-success"><i class="fa fa-tick" aria-hidden="true"></i></span></td></tr>
+              <tr ng-repeat="service in stopped"><td>{{service}}</td><td><span class="text-danger"><p>Stopped</p></span></td><td><span class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-bolt" title="Actions">
+        <a href="#">Manage</a>
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <tbody>
+              <tr><td>Start services</td><td><span class="text-success"><i class="fa fa-play" aria-hidden="true"></i></span></td></tr>
+              <tr><td>Stop services</td><td><span class="text-danger"><i class="fa fa-stop" aria-hidden="true"></i></span></td></tr>
+              <tr><td>Restart services</td><td><span class="text-danger"><i class="fa fa-step-forward" aria-hidden="true"></i></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+</div>

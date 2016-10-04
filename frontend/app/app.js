@@ -2,9 +2,9 @@
 var app = angular.module('lambdaApp', [
     'ui.bootstrap',
     'ui.router',
-    'ngCookies']);
+    'ngCookies',
+    'hadoop']);
 
-// Define the `PhoneListController` controller on the `phonecatApp` module
 app.controller('PhoneListController', function PhoneListController($scope) {
   $scope.phones = [
     {
