@@ -8,3 +8,7 @@
 - setup hosting with apache
 
 See what happens for pseudo distributed cluster
+
+# Apache
+- Create and configure installation
+- Set user in envvar to {{user}}
