@@ -15,6 +15,27 @@ angular.module('hadoop').component('hadoop',
             });
 
         $scope.action = function($action) {
+          if ($action === "upload"){
+            if ($scope.files == null || $scope.files.length === 0){
+                $scope.error = {};
+                $scope.error.upload = {};
+                $scope.error.upload.status = true;
+                $scope.error.upload.message = "No file selected";
+            }
+            else{
+            if($scope.stopped.length === 0){
+                  console.log("no error try to upload");
+            }
+            else{
+              $scope.error = {};
+              $scope.error.upload = {};
+              $scope.error.upload.status = true;
+              $scope.error.upload.message = "Some or all of the Hadoop services are not running";
+            }
+          }
+          }
+          else
+          {
             $http({
               method: 'GET',
               url: 'http://localhost/api/hadoop/?action=' + $action
@@ -23,7 +44,42 @@ angular.module('hadoop').component('hadoop',
               }, function errorCallback(response) {
                 console.log(response);
               });
-            };
+          }};
+
+        $scope.fileUpload = function (files) {
+          $scope.error = {};
+          if ($scope.files == null){
+            $scope.files = [];
+          }
+          for (var i = 0; i < files.length; i++) {
+            file = files.item(i);
+            if($scope.files.indexOf(file) === -1) {
+              $scope.files.push(file);
+            }
+          }
+        };
+
+        $scope.clearFiles = function () {
+          $scope.error = {};
+          if ($scope.files == null || $scope.files.length === 0){
+              $scope.error = {};
+              $scope.error.upload = {};
+              $scope.error.upload.status = true;
+              $scope.error.upload.message = "No files added";
+          }
+          else{
+            $scope.files = [];
+          }
+        };
+
+        $scope.remove = function(file) {
+          $scope.error = {};
+          for(var i = $scope.files.length; i--;) {
+             if($scope.files[i] === file) {
+                 $scope.files.splice(i, 1);
+             }
+         }
+        };
 
         $scope.reload = function () {
           $http({
@@ -38,10 +94,11 @@ angular.module('hadoop').component('hadoop',
             });
           $timeout(function(){
             $scope.reload();
-          }, 10000)
+          }, 5000)
         };
         $scope.reload();
         }
+
       ]
   }
   );

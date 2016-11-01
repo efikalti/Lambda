@@ -1,0 +1,41 @@
+---
+
+  - name: Check if the {{ apache_path }} directory exists
+    stat: path={{ apache_path }}
+    register: stat_result_setup
+    tags:
+      - setup
+
+  - name: Create {{ apache_path }} directory
+    file: path={{ apache_path }} state=directory mode=0755
+    when: stat_result_setup.stat.exists == False
+    tags:
+      - setup
+
+  - name: Install apache2 deamon
+    apt: name=apache2 update_cache=yes
+    tags:
+      - setup
+
+  - name: Copy apache2 configuration.
+    template: src=apache2.conf.j2 dest="{{ installation_path }}/apache2.conf" mode=0644
+    tags:
+      - setup
+
+
+  - name: Enable wsgi apache2 module
+    apache2_module: state=present name=wsgi
+    notify:
+      - restart apache2
+    tags:
+      - setup
+
+  - name: Enable headers apache2 module
+    apache2_module: state=present name=headers
+    notify:
+      - restart apache2
+    tags:
+      - setup
+
+  - name: Copy backend-frontend to apache directory
+    

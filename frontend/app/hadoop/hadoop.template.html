@@ -2,13 +2,12 @@
   <div class="col-lg-6">
     <rd-widget>
       <rd-widget-header icon="fa-server" title="Services">
-        <a href="#">Overview</a>
       </rd-widget-header>
       <rd-widget-body classes="medium no-padding">
         <div class="table-responsive">
           <table class="table">
             <tbody>
-              <tr ng-repeat="service in running"><td>{{service}}</td><td><span class="text-danger"><p>Running</p></span><span class="text-success"><i class="fa fa-tick" aria-hidden="true"></i></span></td></tr>
+              <tr ng-repeat="service in running"><td>{{service}}</td><td><span class="text-success"><p>Running</p></span></td><td><span class="text-success"><i class="fa fa-check" aria-hidden="true"></i></span></td></tr>
               <tr ng-repeat="service in stopped"><td>{{service}}</td><td><span class="text-danger"><p>Stopped</p></span></td><td><span class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span></td></tr>
             </tbody>
           </table>
@@ -22,7 +21,6 @@
   <div class="col-lg-6">
     <rd-widget>
       <rd-widget-header icon="fa-bolt" title="Actions">
-        <a href="#">Manage</a>
       </rd-widget-header>
       <rd-widget-body classes="medium no-padding">
         <div class="table-responsive">
@@ -32,6 +30,108 @@
               <tr><td>Stop services</td><td><button type="button" class="btn btn-danger" ng-click="action('stop')"><i class="fa fa-stop" aria-hidden="true"></i>  Stop</button></td></tr>
               <tr><td>Restart services</td><td><button type="button" class="btn btn-primary" ng-click="action('restart')"><i class="fa fa-refresh" aria-hidden="true"></i>  Restart</button></td></tr>
             </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-cog" title="Jobs">
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tbody>
+              <tr><td>Running jobs</td><td><button type="button" class="btn btn-success" ng-click="action('start')"><i class="fa fa-play" aria-hidden="true"></i>  Start</button></td></tr>
+              <tr><td>Scheduled jobs</td><td><button type="button" class="btn btn-danger" ng-click="action('stop')"><i class="fa fa-stop" aria-hidden="true"></i>  Stop</button></td></tr>
+              <tr><td>Stopped jobs</td><td><button type="button" class="btn btn-primary" ng-click="action('restart')"><i class="fa fa-refresh" aria-hidden="true"></i>  Restart</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-bolt" title="Actions">
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <tbody>
+              <tr><td>Submit job</td><td><button type="button" class="btn btn-success" ng-click="action('start')"><i class="fa fa-play" aria-hidden="true"></i>  Start</button></td></tr>
+              <tr><td>Stop job</td><td><button type="button" class="btn btn-danger" ng-click="action('stop')"><i class="fa fa-stop" aria-hidden="true"></i>  Stop</button></td></tr>
+              <tr><td>Restart services</td><td><button type="button" class="btn btn-primary" ng-click="action('restart')"><i class="fa fa-refresh" aria-hidden="true"></i>  Restart</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-files-o" title="Files">
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tbody>
+              <tr><td>Upload file(s)</td><td><button msl-file-input="fileUpload" multiple type="button" class="btn btn-info"><i class="fa fa-file" aria-hidden="true"></i>  Browse</button></td></tr>
+              <tr><td>Upload directory</td><td><button msl-folder-input="fileUpload" type="button" class="btn btn-info"><i class="fa fa-folder" aria-hidden="true"></i>  Browse</button></td></tr>
+              </tbody>
+          </table>
+        </div>
+      </rd-widget-body>
+      <rd-widget-footer>
+        <div class="clearfix"></div>
+      </rd-widget-footer>
+    </rd-widget>
+  </div>
+  <div class="col-lg-6">
+    <rd-widget>
+      <rd-widget-header icon="fa-bolt" title="Actions">
+      </rd-widget-header>
+      <rd-widget-body classes="medium no-padding">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <tbody>
+              <tr>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Selected files</div>
+                  <div class="panel-body">
+                    <ul class="list-group">
+                      <div ng-if="files.length == 0 || files == null">
+                        None
+                      </div>
+                      <li class="list-group-item" ng-repeat="file in files">{{file.name}}
+                          <button type="button" class="btn btn-link" ng-click="remove(file)"><i class="fa fa-times" aria-hidden="true"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="panel-footer">
+                    <button type="button" class="btn btn-info" ng-click="action('upload')"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+                    <button type="button" class="btn btn-danger" ng-click="clearFiles()"><i class="fa fa-times" aria-hidden="true"></i> Clear all</button>
+                    <div ng-if="error.upload.status" class="alert alert-danger">
+                        {{ error.upload.message }}
+                    </div>
+                  </div>
+                </div>
+              </tr>
+              </tbody>
           </table>
         </div>
       </rd-widget-body>

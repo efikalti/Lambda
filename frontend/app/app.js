@@ -3,6 +3,7 @@ var app = angular.module('lambdaApp', [
     'ui.bootstrap',
     'ui.router',
     'ngCookies',
+    'msl.uploads',
     'hadoop']);
 
 app.controller('PhoneListController', function PhoneListController($scope) {
