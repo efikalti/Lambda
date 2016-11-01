@@ -48,10 +48,9 @@
         <div class="table-responsive">
           <table class="table table-hover">
             <tbody>
-              <tr><td>Running jobs</td><td><button type="button" class="btn btn-success" ng-click="action('start')"><i class="fa fa-play" aria-hidden="true"></i>  Start</button></td></tr>
-              <tr><td>Scheduled jobs</td><td><button type="button" class="btn btn-danger" ng-click="action('stop')"><i class="fa fa-stop" aria-hidden="true"></i>  Stop</button></td></tr>
-              <tr><td>Stopped jobs</td><td><button type="button" class="btn btn-primary" ng-click="action('restart')"><i class="fa fa-refresh" aria-hidden="true"></i>  Restart</button></td></tr>
-            </tbody>
+              <tr><td>Running jobs:</td><td>{{number_of_running}}</td></tr>
+              <tr ng-repeat="application in running_applications"><td>{{application}}</td><td><span class="text-success"><p>Running</p></span></td><td><span class="text-success"><i class="fa fa-check" aria-hidden="true"></i></span></td></tr>
+              </tbody>
           </table>
         </div>
       </rd-widget-body>
@@ -68,9 +67,6 @@
         <div class="table-responsive">
           <table class="table table-striped table-hover">
             <tbody>
-              <tr><td>Submit job</td><td><button type="button" class="btn btn-success" ng-click="action('start')"><i class="fa fa-play" aria-hidden="true"></i>  Start</button></td></tr>
-              <tr><td>Stop job</td><td><button type="button" class="btn btn-danger" ng-click="action('stop')"><i class="fa fa-stop" aria-hidden="true"></i>  Stop</button></td></tr>
-              <tr><td>Restart services</td><td><button type="button" class="btn btn-primary" ng-click="action('restart')"><i class="fa fa-refresh" aria-hidden="true"></i>  Restart</button></td></tr>
             </tbody>
           </table>
         </div>
@@ -91,7 +87,7 @@
           <table class="table table-hover">
             <tbody>
               <tr><td>Upload file(s)</td><td><button msl-file-input="fileUpload" multiple type="button" class="btn btn-info"><i class="fa fa-file" aria-hidden="true"></i>  Browse</button></td></tr>
-              <tr><td>Upload directory</td><td><button msl-folder-input="fileUpload" type="button" class="btn btn-info"><i class="fa fa-folder" aria-hidden="true"></i>  Browse</button></td></tr>
+              <tr><td>Upload directory</td><td><button msl-folder-input="fileUpload" title="Directory upload available only for Google Chrome browsers" type="button" class="btn btn-info"><i class="fa fa-folder" aria-hidden="true"></i>  Browse</button></td></tr>
               </tbody>
           </table>
         </div>

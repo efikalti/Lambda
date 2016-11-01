@@ -30,6 +30,21 @@ def check_hadoop_services(complete_output=False):
         return all_running
 
 
+def check_hadoop_applications():
+    output = list()
+    if check_hadoop_services():
+        result = run_command("/usr/local/hadoop/bin/mapred job -list", True)
+        lines = result.split("\n")
+        number_of_running = lines[1].split(":")[1]
+        try:
+            num = int(number_of_running)
+        except:
+            num = 0
+        if num:
+            jobs = lines[3:]
+    return num, output
+
+
 def check_local_path(path):
     if not os.path.exists(path):
         raise CustomRequestFailed("The prodided path does not exist.")

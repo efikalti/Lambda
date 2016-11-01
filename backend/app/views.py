@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from permissions import *
-from functions import run_command, check_local_path, check_hadoop_services
+from functions import run_command, check_local_path, check_hadoop_services, check_hadoop_applications
 import settings
 import os
 
@@ -20,7 +20,8 @@ class HadoopViewSet(viewsets.ViewSet):
 
         if action == 'check':
             running, stopped = check_hadoop_services(True)
-            return Response({"running_services": running, "stopped_services": stopped}, status=status.HTTP_200_OK)
+            num, output = check_hadoop_applications()
+            return Response({"running_services": running, "stopped_services": stopped, "number_of_running_applications": num, "running_applications": output}, status=status.HTTP_200_OK)
         if action == 'restart':
             restart = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["sbin"] + "/" + hadoop_settings["actions"]['stop']
             output = run_command(restart, True)

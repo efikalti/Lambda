@@ -10,6 +10,8 @@ angular.module('hadoop').component('hadoop',
               arrays = response.data;
               $scope.running = arrays.running_services;
               $scope.stopped = arrays.stopped_services;
+              $scope.running_applications = arrays.running_applications;
+              $scope.number_of_running = arrays.number_of_running_applications;
             }, function errorCallback(response) {
               console.log(response);
             });
@@ -98,7 +100,6 @@ angular.module('hadoop').component('hadoop',
         };
         $scope.reload();
         }
-
       ]
   }
   );
