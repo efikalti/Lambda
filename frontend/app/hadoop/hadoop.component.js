@@ -42,7 +42,7 @@ angular.module('hadoop').component('hadoop',
               method: 'GET',
               url: 'http://localhost/api/hadoop/?action=' + $action
             }).then(function successCallback(response) {
-                console.log(response.data);
+                console.log(response);
               }, function errorCallback(response) {
                 console.log(response);
               });
