@@ -32,6 +32,7 @@ def check_hadoop_services(complete_output=False):
 
 def check_hadoop_applications():
     output = list()
+    num = 0
     if check_hadoop_services():
         result = run_command("/usr/local/hadoop/bin/mapred job -list", True)
         lines = result.split("\n")
@@ -39,7 +40,7 @@ def check_hadoop_applications():
         try:
             num = int(number_of_running)
         except:
-            num = 0
+            pass
         if num:
             jobs = lines[3:]
     return num, output
