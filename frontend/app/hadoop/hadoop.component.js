@@ -26,7 +26,21 @@ angular.module('hadoop').component('hadoop',
             }
             else{
             if($scope.stopped.length === 0){
-                  console.log("no error try to upload");
+              var uploadUrl = 'http://localhost/api/hadoop/?action=';
+              var fd = new FormData();
+              for (var i = 0; i < $scope.files.length; i++) {
+                file = $scope.files.item(i);
+                filename = 'file' + i;
+                fd.append(filename, file);
+              }
+              $http.post(uploadUrl, fd, {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+              })
+              .success(function(){
+              })
+              .error(function(){
+              });
             }
             else{
               $scope.error = {};

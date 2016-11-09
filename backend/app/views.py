@@ -40,6 +40,8 @@ class HadoopViewSet(viewsets.ViewSet):
         if action == 'upload':
             path = request.data.get("path")
             dest = request.data.get("dest")
+            files = request.FILES
+            print files
             # Try to upload
             try:
                 action = hadoop_settings["paths"]["hadoop_home"] + hadoop_settings["paths"]["bin"] + "/hadoop " + hadoop_settings["actions"][action] + " " + path + " " + dest
@@ -56,3 +58,9 @@ class HadoopViewSet(viewsets.ViewSet):
             except:
                 raise CustomRequestFailed("Something went wrong while trying to run the job.")
         return Response(status=status.HTTP_200_OK)
+
+
+def handle_uploaded_file(f, filepath):
+    with open(filepath, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)

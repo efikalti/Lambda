@@ -1,5 +1,6 @@
 import subprocess
 import os
+from exceptions import CustomRequestFailed
 
 services = ['NodeManager', 'DataNode', 'NameNode', 'ResourceManager', 'SecondaryNameNode']
 
