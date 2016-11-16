@@ -191,6 +191,7 @@ command -v ansible >/dev/null 2>&1 ||
 {
   # Try to install git if system is Ubuntu or Centos
   echowarn  "Ansible is required but it's not installed.";
+  echo $OS
   install_ansible $OS
 }
 
