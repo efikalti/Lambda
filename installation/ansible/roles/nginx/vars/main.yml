@@ -1,0 +1,3 @@
+---
+application_path: "/var/www/apps/bitcoin_streamer"
+user: "efi"

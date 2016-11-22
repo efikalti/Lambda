@@ -1,0 +1,13 @@
+---
+
+  - name: Update repositories cache and install "nginx" package
+    apt:
+      name: nginx
+      update_cache: yes
+
+  - name: Create application directory if it does not exists
+    file: path={{ application_path }} state=directory mode=0755 owner = {{ user }} group = {{ user }}
+
+  - name: Install uwsgi package for nginx
+    pip: name=uwsgi
+    become: True

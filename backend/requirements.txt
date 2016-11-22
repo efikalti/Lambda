@@ -5,3 +5,4 @@ mod_wsgi == 4.5.7
 pexpect == 4.2.1
 uwsgi == 2.0.13.1
 blockchain == 1.3.3s
+websocket-client == 0.37.0

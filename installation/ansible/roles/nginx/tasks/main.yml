@@ -1,0 +1,5 @@
+---
+  - name: Include setup tasks.
+    include: setup.yml
+    tags:
+      - setup
